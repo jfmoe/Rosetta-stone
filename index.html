@@ -4,35 +4,151 @@
     <meta charset="UTF-8">
     <meta name="author" content="ManyMeanings">
     <base href="index.hml" target="_blank">
-    <link rel="stylesheet" type = "text/css" href="nav.css">
+    <link rel="stylesheet" type="text/css" href="mycss.css">
     <title>莽原</title>
     <link rel="short icon" href="image/club.ico">
 </head>
 
 <body>
+<div class="content">
+    <!--上方导航栏-->
+    <div class="global-nav">
+        <ul>
+            <li><a href="index.html">主页</a></li>
+            <li><a href="userzone.html">用户</a></li>
+            <li><a href="about.html">关于</a></li>
+            <li style="float:right; padding-right: 15px"><a href="userzone.html">ManyMeanings</a></li>
+        </ul>
+    </div>
 
-<!--上方导航栏-->
-<div class="global-nav" >
-    <ul>
-        <li><a href="index.html">主页</a></li>
-        <li><a href="userzone.html">用户</a></li>
-        <li><a href="about.html">关于</a></li>
-        <li style="float:right; padding-right: 15px"><a href="userzone.html">xxx的账号v</a></li>
-    </ul>
+    <div class="club-nav">
+        <ul>
+            <li><img src="image/title.png" alt="mangyuan" style="margin-top: 5px; margin-left: 307px;"/></li>
+            <li style="float:right; margin-top: 22px; margin-right: 270px;" >
+                <form action="index.php" method="post">
+                    <input class="search" type="text" placeholder="搜索你想知道的..." name="s" autocomplete="off">
+                    <input class="button" type="submit" value="S">
+                </form>
+            </li>
+
+        </ul>
+    </div>
+
+    <!--编辑栏-->
+    <div class="edit">
+        <input type="text" placeholder="分享你所想..." style="height:24px;
+                                                              width: 660px;
+                                                              color: #f2f2f2;
+                                                              padding-left: 10px;
+                                                              font-size: 15px;
+                                                              margin: 0">
+    </div>
+
+    <!--右侧栏-->
+    <div class="aside">
+        <form action="index.php" method="post">
+            <ul>
+                <li>
+                    <div class="text">
+                        <span class="user"></span><input type="text" placeholder="IconDeposit">
+                    </div>
+                </li>
+                <li>
+                    <div class="password">
+                        <span class="key"></span><input type="password" placeholder="••••••••••••••">
+                    </div>
+                </li>
+                <li class="remember">
+                    <input type="checkbox">Remember Me
+                </li>
+                <li>
+                    <a href="" >Forgot username or password?</a>
+                </li>
+                <li>
+                    <input type="button" value="Login">
+                </li>
+            </ul>
+        </form>
+    </div>
+    <!--文章列表-->
+    <div class="articles">
+        <div class="article-block">
+            <div><img src="image/my.jpg"></div>
+            <div style="color:#9d9d9d ;
+                    font-family: Helvetica, Arial, sans-serif ;
+                    font-size: 14px"><a class="name" href="userzone.html">ManyMeanings</a> 的文章:
+            </div>
+
+            <div class="article">
+                <a class="titles" href="acticles.html">第一篇文章：感想</a>
+                <p>本来以为是很简单的网站，但是要把所有的功能都做出来还是很麻烦的。立个FLAG，这个网站做不完！
+                    本来以为是很简单的网站，但是要把所有的功能都做出来还是很麻烦的。立个FLAG，这个网站做不完！ hello world! hello hello world!</p>
+            </div>
+            <div class="time">写于2018-10-2</div>
+        </div>
+
+        <div class="article-block">
+            <div><img src="image/my.jpg"></div>
+            <div style="color:#9d9d9d ;
+                    font-family: Helvetica, Arial, sans-serif ;
+                    font-size: 14px"><a class="name" href="userzone.html">ManyMeanings</a> 的文章:
+            </div>
+
+            <div class="article">
+                <a class="titles" href="acticles.html">第一篇文章：感想</a>
+                <p>本来以为是很简单的网站，但是要把所有的功能都做出来还是很麻烦的。立个FLAG，这个网站做不完！
+                    本来以为是很简单的网站，但是要把所有的功能都做出来还是很麻烦的。立个FLAG，这个网站做不完！ hello world! hello hello world!</p>
+            </div>
+            <div class="time">写于2018-10-2</div>
+        </div>
+
+        <div class="article-block">
+            <div><img src="image/my.jpg"></div>
+            <div style="color:#9d9d9d ;
+                    font-family: Helvetica, Arial, sans-serif ;
+                    font-size: 14px"><a class="name" href="userzone.html">ManyMeanings</a> 的文章:
+            </div>
+
+            <div class="article">
+                <a class="titles" href="acticles.html">第一篇文章：感想</a>
+                <p>本来以为是很简单的网站，但是要把所有的功能都做出来还是很麻烦的。立个FLAG，这个网站做不完！
+                    本来以为是很简单的网站，但是要把所有的功能都做出来还是很麻烦的。立个FLAG，这个网站做不完！ hello world! hello hello world!</p>
+            </div>
+            <div class="time">写于2018-10-2</div>
+        </div>
+
+        <div class="article-block">
+            <div><img src="image/my.jpg"></div>
+            <div style="color:#9d9d9d ;
+                    font-family: Helvetica, Arial, sans-serif ;
+                    font-size: 14px"><a class="name" href="userzone.html">ManyMeanings</a> 的文章:
+            </div>
+
+            <div class="article">
+                <a class="titles" href="acticles.html">第一篇文章：感想</a>
+                <p>本来以为是很简单的网站，但是要把所有的功能都做出来还是很麻烦的。立个FLAG，这个网站做不完！
+                    本来以为是很简单的网站，但是要把所有的功能都做出来还是很麻烦的。立个FLAG，这个网站做不完！ hello world! hello hello world!</p>
+            </div>
+            <div class="time">写于2018-10-2</div>
+            <div class="fenye">
+                <ul class="pagination">
+                    <li><a href="index.html">«</a></li>
+                    <li><a class="active" href="index.html">1</a></li>
+                    <li><a href="index.html">2</a></li>
+                    <li><a href="index.html">3</a></li>
+                    <li><a href="index.html">4</a></li>
+                    <li><a href="index.html">5</a></li>
+                    <li><a href="index.html">6</a></li>
+                    <li><a href="index.html">7</a></li>
+                    <li><a href="index.html">»</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">© 2001－2018 mangyuan.com, all rights reserved 杭州电子科技大学莽原文学社</div>
 </div>
 
-<div class="club-nav">
-    <ul>
-        <li><img src="image/title.png" alt="mangyuan" style="margin: 5px 145px"/></li>
-        <li style="float:right; margin:22px 145px;">
-            <form action="index.php">
-                <input class="search" placeholder="搜索你想知道的..." name="s" autocomplete="off">
-            </form>
-        </li>
-
-    </ul>
-
-
-</div>
 </body>
 </html>
