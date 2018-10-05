@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="author" content="ManyMeanings">
+    <base href="index.hml" target="_blank">
+    <link rel="stylesheet" type="text/css" href="mycss.css">
+    <title>文章</title>
+    <link rel="short icon" href="image/club.ico">
 </head>
 <body>
+<div class="content">
+    <!--上方导航栏-->
+    <div class="global-nav">
+        <ul>
+            <li><a href="index.html">主页</a></li>
+            <li><a href="userzone.html">用户</a></li>
+            <li><a href="about.html">关于</a></li>
+            <li style="float:right; padding-right: 15px"><a href="userzone.html">ManyMeanings</a></li>
+        </ul>
+    </div>
 
+    <div class="club-nav">
+        <ul>
+            <li><img src="image/title.png" alt="mangyuan" style="margin-top: 5px; margin-left: 307px;"/></li>
+            <li style="float:right; margin-top: 22px; margin-right: 290px;" >
+                <div><form action="index.php" method="post">
+                    <input class="search" type="text" placeholder="搜索你想知道的..." name="s" autocomplete="off">
+                    <input class="button" type="submit" value="">
+                </form>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div class="footer">© 2001－2018 mangyuan.com, all rights reserved 杭州电子科技大学莽原文学社</div>
 </body>
 </html>

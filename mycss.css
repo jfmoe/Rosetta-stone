@@ -1,6 +1,7 @@
 * {margin: 0;padding: 0}
 li {list-style: none;}
 form a {text-decoration: none;}
+html, body {font-size: 0}
 
 /*黑色导航栏*/
 .global-nav ul {
@@ -42,19 +43,30 @@ form a {text-decoration: none;}
 }
 
 .search {
-    width: 280px;
+    width: 250px;
     height:30px;
     border: 1px solid #e7eee7;
+    border-right: none;
     background-color: #ffffff;
-    color: #f2f2f2;
+    color: #8a8a8a;
     outline:none;
+    padding-left: 5px;
+    float:left;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #999;
 }
 .button {
-    height: 30px;
+    height: 28px;
     width: 30px;
-    background: #ffffff;
-    color: #f2f2f2;
-    border: 1px solid #f2f2f2;
+    border: 0 solid #f2f2f2;
+    background: url("image/search.png") no-repeat center;
+    line-height: 100px;
+    outline:none;
+    background-color: #ffffff;
+}
+.button:hover {
+    cursor: pointer;
 }
 
 .edit {
@@ -94,7 +106,7 @@ a:hover {
 .name {
     margin-left: 20px;
     margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #555;
@@ -144,15 +156,25 @@ a:hover {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: lighter;
     font-size: 14px;
-    margin-top: 1250px;
+    margin-top: 90px;
     padding-top: 15px;
+    width: 100%;
 }
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.content {
+    flex: 1;
+}
+
 
 /*分页样式*/
 ul.pagination {
     display: inline-block;
-    padding: 0;
-    margin: 0;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 ul.pagination li {display: inline;}
@@ -188,15 +210,17 @@ ul.pagination li a:hover:not(.active) {
 
 /*侧边栏*/
 .aside {
-    float: right;
+    /*float: right;
     margin-right: 310px;
-    margin-top: 75px;
+    margin-top: 75px;*/
     background-color: #edf4ed;
     width: 260px;
-    height: 350px;
+    height: 310px;
+    position: fixed;
+    right: 310px;
+    top: 175px;
 }
 .aside form{
-    margin-top: 20px;
     padding: 20px;
     box-shadow:0 1px 2px 1px #aaaaaa,
     inset 0 1px 1px rgba(255,255,255,0.7);
@@ -306,6 +330,9 @@ ul.pagination li a:hover:not(.active) {
     margin-left: 10px;
     font-family: Helvetica, Arial, sans-serif;
     color: rgb(152,142,135);
+}
+.aside a:hover {
+    color: white;
 }
 .user {
     width: 17px;
