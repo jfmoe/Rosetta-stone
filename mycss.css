@@ -51,17 +51,17 @@ html, body {font-size: 0}
     color: #8a8a8a;
     outline:none;
     padding-left: 5px;
-    float:left;
+    float: left;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
     color: #999;
 }
 .button {
-    height: 28px;
+    height: 32px;
     width: 30px;
-    border: 0 solid #f2f2f2;
+    border: 1px solid #e7eee7;
+    border-left: none;
     background: url("image/search.png") no-repeat center;
-    line-height: 100px;
     outline:none;
     background-color: #ffffff;
 }
@@ -414,5 +414,170 @@ ul.pagination li a:hover:not(.active) {
     text-shadow:
             0 1px 0 rgba(000,000,000,0.3),
             0 0 0 rgba(255,255,255,0);
+}
+
+/*articles.html*/
+.the-article {
+    margin-top: 55px;
+    margin-left: 312px;
+    width: 675px;
+    padding-bottom: 130px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.the-article h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36.4px;
+}
+.the-article p {
+    margin: 0 0 20px 0;
+    line-height: 1.8;
+    font-size: 14px;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.message {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    height: 24px;
+}
+.head-img {
+    width: 24px;
+    height: 24px;
+}
+.author {
+    color: #37a;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+    margin-left: 7px;
+    margin-right: 10px;
+    position: relative;
+    top: -5px;
+}
+.time-in {
+    color: #aaaaaa;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 21px;
+    position: relative;
+    top: -4px;
+}
+.footer-sharing {
+    margin-top: 70px;
+    float: right;
+}
+.good {
+    font-size: 12px;
+    padding: 4px;
+    text-decoration:  none;
+    border: 1px solid orangered;
+    font-family: Helvetica, Arial, sans-serif;
+    color: orangered;
+    margin-left: 7px;
+}
+
+/*评论框*/
+.comments {
+    margin-left: 312px;
+    width: 675px;
+    padding-bottom: 50px;
+}
+.comment-block {
+    margin-top: 30px;
+}
+.reply-button {
+    display: none;
+    color: #999999;
+    font-size: 12px;
+    float: right;
+    cursor: pointer;
+}
+.comments img{
+    width: 48px;
+    height: 48px;
+}
+.title-in-comment {
+    background-color: #f2fbf2;
+    position:relative;
+    top: -48px;
+    padding: 1px;
+    margin-left: 70px;
+}
+.time-in-comment {
+    color: #aaaaaa;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 21px;
+}
+.author-in-comment {
+    color: #37a;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+    margin-left: 7px;
+    padding: 4px;
+}
+.comments p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.62;
+    word-wrap: break-word;
+    margin-left: 70px;
+    position: relative;
+    top: -30px;
+}
+.reply {
+    border-left: 1px solid #999999;
+    padding-left: 8px;
+    margin-bottom: 10px;
+}
+.comment-block:hover .reply-button {
+    display: block;
+}
+
+.comment-edit-title {
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 1.62;
+}
+.comment-edit-box {
+    border: 1px solid #ccc;
+    padding: 3px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: auto;
+    cursor: text;
+    height: 67px;
+    width: 100%;
+    resize: none;
+    flex-direction: column;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    text-align: start;
+    writing-mode: horizontal-tb;
+}
+.comment-edit-button {
+    height: 25px;
+    width: 50px;
+    border: 1px solid #ccc;
+    outline:none;
+    float: right;
+    background-color: #ffffff;
+    margin-top: 5px;
+    position: relative;
+    right: -8px;
 }
 
