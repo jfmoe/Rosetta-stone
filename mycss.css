@@ -210,15 +210,12 @@ ul.pagination li a:hover:not(.active) {
 
 /*侧边栏*/
 .aside {
-    /*float: right;
+    float: right;
     margin-right: 310px;
-    margin-top: 75px;*/
+    margin-top: 75px;
     background-color: #edf4ed;
     width: 260px;
     height: 310px;
-    position: fixed;
-    right: 310px;
-    top: 175px;
 }
 .aside form{
     padding: 20px;
@@ -421,7 +418,7 @@ ul.pagination li a:hover:not(.active) {
     margin-top: 55px;
     margin-left: 312px;
     width: 675px;
-    padding-bottom: 130px;
+    padding-bottom: 115px;
     border-bottom: 1px solid #e6e6e6;
 }
 .the-article h1 {
@@ -472,16 +469,23 @@ ul.pagination li a:hover:not(.active) {
 }
 .footer-sharing {
     margin-top: 70px;
-    float: right;
+}
+.read-number {
+    float: left;
+    color: #aaaaaa;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
 }
 .good {
     font-size: 12px;
-    padding: 4px;
+    padding: 2px;
     text-decoration:  none;
     border: 1px solid orangered;
     font-family: Helvetica, Arial, sans-serif;
     color: orangered;
     margin-left: 7px;
+    float: right;
 }
 
 /*评论框*/
@@ -580,4 +584,124 @@ ul.pagination li a:hover:not(.active) {
     position: relative;
     right: -8px;
 }
+
+/*文章阅读界面侧边栏*/
+.aside-in-articles {
+    float: right;
+    margin-right: 275px;
+    margin-top: 62px;
+    width: 300px;
+}
+.mini-userzone {
+    background-color: #fff6ed;
+    padding: 18px 20px 35px 20px;
+    margin-bottom: 40px;
+}
+.aside-in-articles .mini-userzone img {
+    width: 48px;
+    height: 48px;
+    float: right;
+}
+.name-in-miniaside {
+    color: #37a;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+}
+.mini-userzone .home {
+    color: #444;
+    line-height: 1.62;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    word-break: break-all;
+}
+.mini-userzone p {
+    color: #aaa;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    margin-right: 60px;
+    word-break: break-all;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.data-in-miniaside {
+    color: #aaa;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    float: right;
+}
+
+.articles-in-aside {
+    margin-bottom: 40px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+}
+.title-in-aside {
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 24px;
+
+}
+.title-in-aside a {
+    color: #072;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+}
+.title-in-aside a:hover {
+    color: #f2f2f2;
+}
+.new-articles a {
+    color: #37a;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+}
+.new-articles a:hover {
+    color: #f2f2f2;
+}
+.new-articles {
+    color: #666;
+    font-size: 13px;
+    border-bottom: 1px dashed #ccc;
+    padding: 0 0 5px 0;
+    margin: 5px 0 0 0;
+}
+.hot-articles a {
+    color: #37a;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+}
+.hot-articles a:hover {
+    color: #f2f2f2;
+}
+.hot-articles {
+    color: #666;
+    font-size: 13px;
+}
+.hot-articles p {
+    margin-bottom: 7px;
+    font-size: 13px;
+    line-height: 1;
+    color: #aaaaaa;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
 
