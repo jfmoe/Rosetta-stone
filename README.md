@@ -1,4 +1,5 @@
 # Rosetta-stone
 
 club members communicate
-show£ºhttps://manymeanings.github.io/Rosetta-stone/
+
+show: https://manymeanings.github.io/Rosetta-stone/

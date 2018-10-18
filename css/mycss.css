@@ -61,7 +61,7 @@ html, body {font-size: 0}
     width: 30px;
     border: 1px solid #e7eee7;
     border-left: none;
-    background: url("image/search.png") no-repeat center;
+    background: url("../image/search.png") no-repeat center;
     outline:none;
     background-color: #ffffff;
 }
@@ -334,13 +334,13 @@ ul.pagination li a:hover:not(.active) {
 .user {
     width: 17px;
     height: 17px;
-    background: url("image/user.png") no-repeat;
+    background: url("../image/user.png") no-repeat;
     padding-left: 30px;
 }
 .key {
     width: 17px;
     height: 17px;
-    background: url("image/key.png") no-repeat;
+    background: url("../image/key.png") no-repeat;
     padding-left: 30px;
 }
 .aside ul li input[type*="button"]{
@@ -413,7 +413,7 @@ ul.pagination li a:hover:not(.active) {
             0 0 0 rgba(255,255,255,0);
 }
 
-/*articles.html*/
+/*show-1.html*/
 .the-article {
     margin-top: 55px;
     margin-left: 312px;
