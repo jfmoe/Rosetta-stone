@@ -34,6 +34,7 @@
 
         </ul>
     </div>
+
     <--正文栏-->
     <div class="message">
         <--头-->
@@ -124,8 +125,258 @@
             <div class="hot-articles"><a href="userzone.html">凑数的</a><p>ManyMeanings&nbsp;555555人浏览<p></div>
         </div>
 
+
+
     </div>
 </div>
 <div class="footer">© 2001－2018 mangyuan.com, all rights reserved 杭州电子科技大学莽原文学社</div>
 </body>
 </html>
+
+
+p {
+    color: #555555;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 21px;
+}
+
+.message {
+    margin-top: 55px;
+    margin-left: 312px;
+    width: 675px;
+    float: left;
+}
+.message-in-aside {
+    float: right;
+    margin-right: 275px;
+    margin-top: 62px;
+    width: 300px;
+}
+.msg-card {
+    word-wrap: break-word;
+    padding: 9px 9px;
+    background: #fff6ed;
+    border: 1px solid #faefe3;
+    margin-bottom: 30px;
+}
+.msg-card img {
+    width: 150px;
+    height: 150px;
+}
+.place {
+    font: 13px Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    color: #666666;
+    position: relative;
+    top: -137px;
+    left: +10px;
+}
+.time-to-join {
+    font: 13px Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    color: #666666;
+    float: right;
+    position: relative;
+    top: -134px;
+    left: -23px;
+}
+.star {
+    font: 13px Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    color: #666666;
+    float: right;
+    position: relative;
+    left: +39px;
+    top: -80px;
+}
+.line {
+    clear: both;
+    border-bottom: 1px solid #f5e9db;
+    margin: 5px;
+    overflow: hidden;
+}
+.word {
+    font: 13px Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    color: #666666;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+/*左边*/
+.img-in-headmsg {
+    width: 48px;
+    height: 48px;
+}
+.name-in-message {
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    word-wrap: break-word;
+    font-weight: bold;
+    color: #494949;
+    padding: 0 0 15px 0;
+    line-height: 1.1;
+    position: relative;
+    top: -27px;
+}
+.sth-to-say {
+    font: 12px Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    color: #666666;
+    margin-left: 58px;
+    position: relative;
+    top: -18px;
+}
+
+/*书*/
+
+.articles-to-show {
+    margin-top: 50px;
+}
+.title-in-this {
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #072;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+.title-in-this a {
+    color: #072;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+}
+.title-in-this a:hover {
+    color: #f2f2f2;
+}
+.title-in-show {
+    color: #37a;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+}
+.title-in-show:hover {
+    color: #f2f2f2;
+}
+.time-in-show {
+    color: #aaaaaa;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+.show-articles-blocks {
+    margin-top: 20px;
+}
+/*书*/
+.books-to-show {
+    margin-top: 50px;
+}
+.book-tip {
+    color: #acacac;
+    float: left;
+    line-height: 128px;
+    height: 128px;
+    font-size: 13px;
+    width: 26px;
+    white-space: nowrap;
+}
+.books-to-show img {
+    height: 126.3px;
+    width: 85px;
+    margin-left: 40px;
+}
+.tv-to-show {
+    margin-top: 50px;
+}
+.tv-to-show img{
+    height: 126.3px;
+    width: 85px;
+    margin-left: 40px;
+}
+
+.articles-in-aside {
+    margin-bottom: 30px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+.title-in-aside {
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 24px;
+
+}
+.title-in-aside a {
+    color: #072;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+}
+.title-in-aside a:hover {
+    color: #f2f2f2;
+}
+.new-articles a {
+    color: #37a;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+}
+.new-articles a:hover {
+    color: #f2f2f2;
+}
+.new-articles {
+    color: #666;
+    font-size: 13px;
+    border-bottom: 1px dashed #ccc;
+    padding: 0 0 5px 0;
+    margin: 5px 0 0 0;
+}
+
+.hot-articles a {
+    color: #37a;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+}
+.hot-articles a:hover {
+    color: #f2f2f2;
+}
+.hot-articles {
+    color: #666;
+    font-size: 13px;
+}
+.hot-articles p {
+    margin-bottom: 7px;
+    font-size: 13px;
+    line-height: 1;
+    color: #aaaaaa;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.books-in-read img {
+    height: 126.3px;
+    width: 85px;
+    margin-right: 40px;
+
+}
