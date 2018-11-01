@@ -6,6 +6,7 @@
     width: 675px;
     padding-bottom: 115px;
     border-bottom: 1px solid #e6e6e6;
+    float: left;
 }
 .the-article h1 {
     font-family: Helvetica, Arial, sans-serif;
@@ -173,8 +174,8 @@
 
 /*文章阅读界面侧边栏*/
 .aside-in-articles {
-    float: right;
-    margin-right: 275px;
+    float: left;
+    margin-left: 80px;
     margin-top: 62px;
     width: 300px;
 }

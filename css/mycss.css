@@ -210,9 +210,8 @@ ul.pagination li a:hover:not(.active) {
 
 /*侧边栏*/
 .aside {
-    float: right;
-    margin-right: 310px;
-    margin-top: 75px;
+    float: left;
+    margin-left: 90px;
     background-color: #edf4ed;
     width: 260px;
     height: 310px;
