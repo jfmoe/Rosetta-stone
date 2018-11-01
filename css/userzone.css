@@ -5,18 +5,20 @@ p {
     font-weight: normal;
     line-height: 21px;
 }
-
+.center {
+    margin:0 auto;
+}
 .message {
-    margin-top: 55px;
-    margin-left: 312px;
-    width: 675px;
+    margin-left: 310px;
     float: left;
+    margin-top: 55px;
+    width: 675px;
 }
 .message-in-aside {
-    float: right;
-    margin-right: 275px;
+    float: left;
     margin-top: 62px;
     width: 300px;
+    margin-left: 80px;
 }
 .msg-card {
     word-wrap: break-word;
@@ -244,3 +246,4 @@ p {
     margin-right: 40px;
 
 }
+
