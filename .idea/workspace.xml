@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="566d6c69-a1bd-47d3-be1a-0a7c49a08ad0" name="Default Changelist" comment="">
+    <list default="true" id="566d6c69-a1bd-47d3-be1a-0a7c49a08ad0" name="Default Changelist" comment="优化目录结构">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/articlesedit.html" beforeDir="false" afterPath="$PROJECT_DIR$/articles/articlesedit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/articles/show-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/articles/show-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/articles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/articles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/mycss.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mycss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/articles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/articles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/mycss.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/mycss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/userzone.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/userzone.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/book.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/image/book.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/break.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/image/break.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/club.ico" beforeDir="false" afterPath="$PROJECT_DIR$/assets/image/club.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/club.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/image/club.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/key.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/image/key.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/my.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/image/my.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/image/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/title.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/image/title.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/image/user.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userzone.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/userzone.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,10 +48,11 @@
     <session id="491429225">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="51" />
+          <entry key="project.closed" value="54" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="4" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.21" value="2" />
@@ -43,8 +60,8 @@
           <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.7" value="17" />
           <entry key="project.open.time.8" value="13" />
-          <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="52" />
+          <entry key="project.open.time.9" value="7" />
+          <entry key="project.opened" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,9 +71,10 @@
           <entry key="ico" value="5" />
           <entry key="jpg" value="2" />
           <entry key="js" value="2" />
+          <entry key="l" value="1" />
           <entry key="ll" value="2" />
-          <entry key="md" value="3" />
-          <entry key="php" value="8" />
+          <entry key="md" value="4" />
+          <entry key="php" value="10" />
           <entry key="png" value="4" />
           <entry key="svg" value="2" />
         </counts>
@@ -67,110 +85,45 @@
           <entry key="HTML" value="29" />
           <entry key="Image" value="11" />
           <entry key="JavaScript" value="2" />
-          <entry key="Markdown" value="3" />
-          <entry key="PHP" value="8" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Markdown" value="4" />
+          <entry key="PHP" value="10" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="SVG" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="7455" />
-          <entry key="html" value="7316" />
+          <entry key="css" value="7483" />
+          <entry key="dummy" value="4" />
+          <entry key="html" value="7338" />
           <entry key="ll" value="3" />
-          <entry key="md" value="5" />
+          <entry key="md" value="629" />
+          <entry key="php" value="1" />
+          <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="7455" />
-          <entry key="HTML" value="7316" />
-          <entry key="Markdown" value="5" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="CSS" value="7483" />
+          <entry key="HTML" value="7338" />
+          <entry key="Markdown" value="629" />
+          <entry key="PHP" value="1" />
+          <entry key="PLAIN_TEXT" value="13" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/userzone.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1265">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/userzone.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ll">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2948">
-              <caret line="134" selection-start-line="134" selection-end-line="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="125" column="51" lean-forward="true" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+            <state relative-caret-position="-990">
+              <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/mycss.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="88" column="15" lean-forward="true" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/articles/show-1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="715">
-              <caret line="91" column="10" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#3396#3402#0" expanded="true" />
-                <element signature="e#3403#3409#0" expanded="true" />
-                <element signature="e#3410#3416#0" expanded="true" />
-                <element signature="e#3417#3423#0" expanded="true" />
-                <element signature="e#3424#3430#0" expanded="true" />
-                <element signature="e#3431#3437#0" expanded="true" />
-                <element signature="e#3438#3444#0" expanded="true" />
-                <element signature="e#3559#3565#0" expanded="true" />
-                <element signature="e#3652#3658#0" expanded="true" />
-                <element signature="e#3757#3763#0" expanded="true" />
-                <element signature="e#3851#3857#0" expanded="true" />
-                <element signature="e#3942#3948#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/articles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -190,6 +143,12 @@
     <findStrings>
       <find>dbdbdb</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\css</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -218,8 +177,13 @@
         <option value="$PROJECT_DIR$/css/userzone.css" />
         <option value="$PROJECT_DIR$/css/articles.css" />
         <option value="$PROJECT_DIR$/articles/show-1.html" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/doc/陶俊帆问题解决.md" />
+        <option value="$PROJECT_DIR$/doc/problem.md" />
         <option value="$PROJECT_DIR$/css/mycss.css" />
+        <option value="$PROJECT_DIR$/assets/css/mycss.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/inc/l" />
+        <option value="$PROJECT_DIR$/inc/chrome.php" />
       </list>
     </option>
   </component>
@@ -229,10 +193,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="715" />
-    <option name="width" value="1026" />
-    <option name="height" value="1082" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="918" />
+    <option name="y" value="18" />
+    <option name="width" value="1029" />
+    <option name="height" value="1086" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -256,6 +221,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,30 +232,19 @@
             <path>
               <item name="Rosetta-stone" type="b2602c69:ProjectViewProjectNode" />
               <item name="Rosetta-stone" type="462c0819:PsiDirectoryNode" />
-              <item name="articles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Rosetta-stone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Rosetta-stone" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Rosetta-stone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Rosetta-stone" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="footer&#9;null&#9;null&#10;aside&#9;null&#9;null&#10;min-max&#9;null&#9;null&#10;gtx&#9;null&#9;null&#10;top&#9;null&#9;null&#10;global-nav&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled/show.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../php_blog-master/php_blog-master/v14" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -297,10 +252,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\user" />
+      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\assets" />
+      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\doc" />
       <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\image" />
       <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\articles" />
-      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\css" />
-      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,16 +333,20 @@
       <workItem from="1540980420347" duration="1274000" />
       <workItem from="1541030010929" duration="4031000" />
       <workItem from="1541034644827" duration="1174000" />
+      <workItem from="1541037552846" duration="3151000" />
+      <workItem from="1541044270180" duration="599000" />
+      <workItem from="1541050681090" duration="2875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134346000" />
+    <option name="totallyTimeSpent" value="140971000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1691" height="958" extended-state="6" />
+    <frame x="-8" y="-8" width="1691" height="958" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20232986" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20968731" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -460,22 +420,25 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/markdown.html" />
     <entry file="file://$PROJECT_DIR$/douban.css" />
     <entry file="file://$PROJECT_DIR$/bundle.css" />
-    <entry file="file://$PROJECT_DIR$/image/title.png">
+    <entry file="file://$PROJECT_DIR$/assets/image/title.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$USER_HOME$/Desktop/Rosetta-stone-3.1/Rosetta-stone-3.1/index.php" />
-    <entry file="file://$PROJECT_DIR$/image/my.jpg">
+    <entry file="file://$PROJECT_DIR$/assets/image/my.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/footer.html" />
     <entry file="file://$PROJECT_DIR$/image/user.ico" />
     <entry file="file://$PROJECT_DIR$/image/key.ico" />
     <entry file="file://$PROJECT_DIR$/image/key.svg" />
-    <entry file="file://$PROJECT_DIR$/image/search.png">
+    <entry file="file://$PROJECT_DIR$/assets/image/search.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/articles/articlesedit.html">
@@ -521,10 +484,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/club.ico">
+    <entry file="file://$PROJECT_DIR$/assets/image/club.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/adimin.html">
@@ -534,10 +494,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image/break.jpg">
+    <entry file="file://$PROJECT_DIR$/assets/image/break.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/test.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/test.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ll">
@@ -547,23 +507,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userzone.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1265">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/articles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/articles/show-1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
+        <state relative-caret-position="2002">
           <caret line="91" column="10" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -583,28 +529,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/userzone.css">
+    <entry file="file://$PROJECT_DIR$/assets/css/articles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        <state relative-caret-position="176">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/doc/problem.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="440">
+            <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/mycss.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="125" column="51" lean-forward="true" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+        <state relative-caret-position="113">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/userzone.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/mycss.css">
+    <entry file="file://$PROJECT_DIR$/inc/ChromePhp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="88" column="15" lean-forward="true" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
+        <state relative-caret-position="5131">
+          <caret line="281" column="6" lean-forward="true" selection-start-line="281" selection-start-column="6" selection-end-line="281" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/userzone.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2398">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/working/php_blog-master/php_blog-master/v14/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-990">
+          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
