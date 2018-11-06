@@ -14,7 +14,7 @@
     <!--上方导航栏-->
     <div class="global-nav">
         <ul>
-            <li><a href="../index.html">主页</a></li>
+            <li><a href="../index.php">主页</a></li>
             <li><a href="../user/userzone.html">用户</a></li>
             <li><a href="../about.html">关于</a></li>
             <li style="float:right; padding-right: 15px"><a href="../user/userzone.html">ManyMeanings</a></li>
@@ -35,29 +35,22 @@
         </ul>
     </div>
 
+    <?php
+        require_once  '../inc/db.php';
+        $query = $db->prepare('select * from articles where article_id =:id');
+        $query->bindValue(':id',$_GET['id'],PDO::PARAM_INT);
+        $query->execute();
+        $article = $query->fetchObject();
+    ?>
     <--文章-->
     <div class="the-article">
-        <h1>孤独有毒</h1>
+        <h1><?php echo $article->title?></h1>
         <div class="message">
             <img src="../assets/image/my.jpg" class="head-img">
             <a class="author" href="../user/userzone.html">Manymeanings</a>
-            <span class="time-in">2018-10-02 00:00:00</span>
+            <span class="time-in">2<?php echo $article->article_created_time?></span>
         </div>
-        <p>怎样的一种毒？他不会见血封喉，半步就倒，它会像个人畜无害的小动物躲在你身体的某个角落，一点点吃掉你的心。</p>
-
-        <p>我固然喜欢长长的假期，可当连续几日不与人交也会陷入无事可做的窘境。有人体会过捧着手机坐在电脑前却不知道干啥的痛苦吗，那是孤独的毒在发作。我虽然很宅但一直不承认自己是死宅，大概是因为我真的很讨厌宅吧。</p>
-
-        <p>现在好多视频网站都有弹幕，刚知道有那玩意儿时我还不懂，为什么看个视频还要忍受被一排排字挡住画面的痛苦，后来渐渐明白，这是一群孤独的人相拥取暖的地方。一个人低头数着进度条，看到精彩处，浑身寒毛炸起，可是身边却没有一个能听你吐槽的人。想说的话憋在心里总要憋出内伤，于是你将你的感慨写在弹幕里的某分某秒，这样后来人便知道你曾经走过这里，留下过你的声音，这样你便和他在冥冥中建立起一种联系，就像飞鸟掠过断崖。</p>
-
-        <p>然而朋友不在身旁，总免不了一个人孤独下去。这世上有太多种无缘，无缘这个，无缘那个。说来缘分真是个奇妙的东西。它总喜欢变脸色，时而阴，时而晴，时而狂风暴雨，希望和失望常交织在一起，织出个理也理不清的毛线球，最后被绝望地一脚踢走，哭笑不得。</p>
-
-        <p>怎样的人才有资格谈论孤独？你会说一个死宅孤独吗？可是你看他有好多好多网络朋友，纵然不得相见，可是总是在线，大家不必顾忌现实的那层伪装而显得更加真实。他甚至还有一整个二次元世界的陪伴，有他臆想中的男神女神御姐萌妹，有他可以肆无忌惮痛哭流泪的地方，有他可以没心没肺放肆傻笑的地方，你好意思说他孤独吗？可是，你看他总像地鼠一样窝在家中，啃着面包可怜兮兮。就算是地鼠从门里探出头也会有人提着塑料锤子去招呼它，可他呢？风匆匆而过，带不走什么。</p>
-
-        <p>孤独的毒，是一种植入灵魂的毒，中了毒的人走在路上，仿佛整个世界都在孤独。山上的塔是孤独的，路旁的树是孤独的，头顶的月是孤独的，就连那群整日在一起打闹的年轻人都是孤独的。其实啊，世界才没有他想的那么不堪，世界还是那个世界，只是他选择了孤独，他没有办法逃避孤独，因为孤独就在那里。</p>
-
-        <p>每个人生来就被种下了毒，我们终究只是一个个孤独的灵魂，走在自己的路上，走向自己的终点。只是有些路会有交集，有些灵魂可以相拥取暖，孤独便在这时悄悄隐匿，恍若不见。  </p>
-
-        <p>当有一天灵魂失去了温度，毒症将会浮出。</p>
+        <pre><?php echo $article->body?></pre>
         <div class="footer-sharing">
             <span class="read-number">浏览量：10086</span>
             <a class="good">星星</a>
@@ -82,7 +75,7 @@
             <div class="new-articles"><a href="../user/userzone.html">凑数的</a>&nbsp;(123颗星星)</div>
         </div>
         <div class="articles-in-aside">
-            <div class="title-in-aside">近期热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../index.html">(去主页)</a></div>
+            <div class="title-in-aside">近期热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../index.php">(去主页)</a></div>
             <div class="hot-articles"><a href="../user/userzone.html">孤独有毒</a><p>ManyMeanings&nbsp;10086人浏览<p></div>
             <div class="hot-articles"><a href="../user/userzone.html">第二篇文章</a><p>ManyMeanings&nbsp;233人浏览<p></div>
             <div class="hot-articles"><a href="../user/userzone.html">The Third Article</a><p>ManyMeanings&nbsp;8888人浏览<p></div>

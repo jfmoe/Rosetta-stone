@@ -1,5 +1,5 @@
 
-/*show-1.html*/
+/*show.php*/
 .the-article {
     margin-top: 55px;
     margin-left: 312px;
@@ -14,7 +14,7 @@
     font-weight: 700;
     line-height: 36.4px;
 }
-.the-article p {
+.the-article pre {
     margin: 0 0 20px 0;
     line-height: 1.8;
     font-size: 14px;
