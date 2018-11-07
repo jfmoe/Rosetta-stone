@@ -64,6 +64,21 @@
     font-size: 13px;
     font-weight: normal;
 }
+.change-button {
+    display: none;
+    float: right;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px;
+    text-decoration:  none;
+    border: 1px solid orangered;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-left: 7px;
+    color: orangered;
+}
+.the-article:hover .change-button {
+     display: block;
+ }
 .good {
     font-size: 12px;
     padding: 2px;

@@ -38,11 +38,12 @@
     <div class="center">
         <!--编辑栏-->
         <div class="edit">
-            <a href="articles/new.php" ><input type="text" placeholder="点击上传您的文章..." style="height:24px;
+            <a href="articles/new.php"><input type="text" placeholder="点击这里上传您的文章..." style="height:24px;
                                                               width: 660px;
                                                               color: #f2f2f2;
                                                               padding-left: 10px;
-                                                              font-size: 15px;"></a>
+                                                              font-size: 15px;
+                                                              cursor: pointer;"></a>
         </div>
     <!--文章列表-->
     <div class="articles">
@@ -50,19 +51,18 @@
         <?php
             require_once 'inc/db.php';
             require'inc/common.php';
-            $query = $db->query('select * from articles');
+            $query = $db->query('select * from articles order by article_updated_time desc');
             while( $article = $query->fetchObject() ) {
         ?>
-        <div class="article-block">
+        <div class="article-block" >
             <div><img src="assets/image/my.jpg"></div>
             <div style="color:#9d9d9d ;
                     font-family: Helvetica, Arial, sans-serif ;
                     font-size: 14px"><a class="name" href="user/userzone.html">ManyMeanings</a> 的文章:
             </div>
-
             <div class="article">
                 <a class="titles" href="articles/show.php?id=<?php print $article->article_id; ?>"><?php echo $article->title?></a>
-                <p><?php echo subtext($article->body,120);?></p>
+                <p style="margin-top: 5px"><?php echo subtext($article->body,120);?></p>
             </div>
             <div class="time">写于<?php echo $article->article_created_time; ?></div>
         </div>

@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+textarea, input {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    font: 400 14px Arial;
+}
+.edit-area {
+    height: 350px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-0);
+    width: 38%;
+}
+.top-title {
+    /*background-color: #f8f8f8;*/
+    padding-bottom: 70px;
+}
+#ui {
+    height: 40px;
+    float: left;
+}
+#submit {
+    height: 40px;
+    width: 40px;
+    border: none;
+    padding: 5px;
+    background: url("../image/submit.png") no-repeat center;
+    background-size:20px 20px ;
+    outline:none;
+    float: right;
+}
+#submit:hover {
+    cursor: pointer;
+}
+#title {
+    display: block;
+    width: 100%;
+    border: none;
+    font-size: 24px;
+    color: #797979;
+    font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    padding: 0 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#body {
+    display: block;
+    width: 100%;
+    border-top: 3px solid #f1f1f1;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin-left: 20px;
+    color: #797979;
+    font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 13px;
+    padding: 15px 0;
+    resize:none;
+    height:620px;
+    line-height: 1.8;
+}
+#body:focus {
+    outline: none;
+}
+#title:focus {
+    outline: none;
+}
+

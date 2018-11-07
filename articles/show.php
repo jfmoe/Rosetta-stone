@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="ManyMeanings">
-    <base href="index.hml" target="_blank">
+    <base href="index.hml" >
     <link rel="stylesheet" type="text/css" href="../assets/css/mycss.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/articles.css">
     <title>文章</title>
@@ -48,14 +48,19 @@
         <div class="message">
             <img src="../assets/image/my.jpg" class="head-img">
             <a class="author" href="../user/userzone.html">Manymeanings</a>
-            <span class="time-in">2<?php echo $article->article_created_time?></span>
+            <span class="time-in"><?php echo $article->article_created_time?></span>
         </div>
         <pre><?php echo $article->body?></pre>
         <div class="footer-sharing">
             <span class="read-number">浏览量：10086</span>
             <a class="good">星星</a>
             <a class="good">收藏</a>
-        </div>
+            <form action="destroy.php" method="post">
+                <input type="hidden" name="id" value = "<?php echo $article->article_id; ?>"/>
+                <input class="change-button"type="submit" value="删除" onclick="alert('是否确定删除本篇文章？')">
+            </form>
+            <div><a class="change-button" href="edit.php?id=<?php echo $article->article_id; ?>">修改</a></div>
+    </div>
     </div>
     <--侧边栏-->
     <div class="aside-in-articles">
