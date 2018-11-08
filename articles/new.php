@@ -13,7 +13,7 @@
     <form action="save.php" method="post" >
         <div class="top-title">
             <img src="../assets/image/title.png" id="ui">
-            <input type="submit" id="submit" value="" autocomplete="off" onclick="alert('是否确定上传文章？')"/>
+            <input type="submit" id="submit" value="" autocomplete="off" onclick="return confirm('是否确定上传文章？')"/>
         </div>
             <input type="text" id="title" name="title" placeholder="添加标题" autocomplete="off"/>
         <br/>

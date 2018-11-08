@@ -21,7 +21,7 @@
     <form action="update.php" method="post">
         <div class="top-title">
             <img src="../assets/image/title.png" id="ui">
-            <input type="submit" id="submit" value="" autocomplete="off" onclick="alert('是否确定修改文章？')"/>
+            <input type="submit" id="submit" value="" autocomplete="off" onclick="return confirm('是否确定修改文章？')"/>
         </div>
         <input type="hidden" name="id" value = "<?php echo $id; ?>"/>
         <input type="text" name="title" value="<?php echo $article->title ?>" id="title" autocomplete="off"/>

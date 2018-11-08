@@ -70,7 +70,7 @@ textarea, input {
     line-height: 1.8;
 }
 #body:focus {
-    outline: none;
+     outline: none;
 }
 #title:focus {
     outline: none;

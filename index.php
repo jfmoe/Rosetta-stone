@@ -16,9 +16,9 @@
     <div class="global-nav">
         <ul>
             <li><a href="index.php">主页</a></li>
-            <li><a href="user/userzone.html">用户</a></li>
+            <li><a href="user/show.html">用户</a></li>
             <li><a href="about.html">关于</a></li>
-            <li style="float:right; padding-right: 15px"><a href="user/userzone.html">ManyMeanings</a></li>
+            <li style="float:right; padding-right: 15px"><a href="user/show.html">ManyMeanings</a></li>
         </ul>
     </div>
 
@@ -58,7 +58,7 @@
             <div><img src="assets/image/my.jpg"></div>
             <div style="color:#9d9d9d ;
                     font-family: Helvetica, Arial, sans-serif ;
-                    font-size: 14px"><a class="name" href="user/userzone.html">ManyMeanings</a> 的文章:
+                    font-size: 14px"><a class="name" href="user/show.html">ManyMeanings</a> 的文章:
             </div>
             <div class="article">
                 <a class="titles" href="articles/show.php?id=<?php print $article->article_id; ?>"><?php echo $article->title?></a>

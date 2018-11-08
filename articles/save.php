@@ -15,5 +15,6 @@
     if(!$query->execute()) {
         print_r($query->errorInfo());
     }else{
+        $article = $query->fetchObject();
         redirect_to("../");
     };

@@ -3,6 +3,7 @@
 .the-article {
     margin-top: 55px;
     margin-left: 312px;
+    margin-bottom: 20px;
     width: 675px;
     padding-bottom: 115px;
     border-bottom: 1px solid #e6e6e6;
@@ -75,6 +76,7 @@
     font-family: Helvetica, Arial, sans-serif;
     margin-left: 7px;
     color: orangered;
+    background-color: white;
 }
 .the-article:hover .change-button {
      display: block;
@@ -97,7 +99,7 @@
     padding-bottom: 50px;
 }
 .comment-block {
-    margin-top: 30px;
+    padding-bottom: 30px;
 }
 .reply-button {
     display: none;
@@ -105,6 +107,16 @@
     font-size: 12px;
     float: right;
     cursor: pointer;
+}
+.comment-delete-button {
+    background-color: white;
+    border: none;
+    display: none;
+    color: #999999;
+    font-size: 12px;
+    float: right;
+    cursor: pointer;
+    margin-left: 5px;
 }
 .comments img{
     width: 48px;
@@ -149,7 +161,10 @@
     padding-left: 8px;
     margin-bottom: 10px;
 }
-.comment-block:hover .reply-button {
+/*.comment-block:hover .reply-button {
+    display: block;
+}*/
+.comment-block:hover .comment-delete-button {
     display: block;
 }
 
@@ -174,6 +189,9 @@
     overflow-wrap: break-word;
     text-align: start;
     writing-mode: horizontal-tb;
+}
+.comment-edit-box:focus {
+    outline: none;
 }
 .comment-edit-button {
     height: 25px;
