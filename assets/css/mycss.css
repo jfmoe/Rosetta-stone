@@ -186,7 +186,7 @@ ul.pagination li a {
     color: #37a;
     float: left;
     text-decoration: none;
-    transition: background-color .3s;
+    transition: background-color .10s;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
@@ -194,9 +194,9 @@ ul.pagination li a {
 }
 
 ul.pagination li a.active {
-    background-color: #83bf73;
-    color: white;
-}
+     background-color: #83bf73;
+     color: white;
+ }
 
 ul.pagination li a:hover:not(.active) {
     background-color: #ddd;
