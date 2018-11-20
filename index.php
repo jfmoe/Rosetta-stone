@@ -11,9 +11,12 @@
 
 <body>
 <?php
+    require_once 'inc/session.php';
     require_once 'inc/db.php';
     require_once 'inc/fun_paging.php';
-    require_once 'inc/function.php';
+    require_once 'inc/common.php';
+
+    if(is_login()) echo '当前用户: ' . current_user()->name ;
 
     $sql = "select * from articles";
     $db1  = $db->query($sql)->fetchAll();
@@ -22,7 +25,7 @@
     $cpage = isset($_GET['page'])?intval($_GET['page']):1;
     $pagenum = ceil($total/$num);
     $offset = ($cpage-1)*$num;
-    $sql = "select * from articles order by article_updated_time desc limit {$offset},{$num}";
+    $sql = "select * from articles where article_is_delete=0 order by article_updated_time desc limit {$offset},{$num}";
     $result  = $db->query($sql)->fetchAll();
     $start = $offset+1;
     $end=($cpage==$pagenum)?$total : ($cpage*$num);//结束记录页
@@ -37,7 +40,7 @@
             <li><a href="index.php">主页</a></li>
             <li><a href="user/show.html">用户</a></li>
             <li><a href="about.html">关于</a></li>
-            <li style="float:right; padding-right: 15px"><a href="user/show.html">ManyMeanings</a></li>
+            <li style="float:right; padding-right: 15px"><a href="<?php if(is_login()) echo 'user/show.html';else echo 'user/index.php'?>"><?php if(is_login()) echo current_user()->nickname;else echo '登录'?></a></li>
         </ul>
     </div>
 
