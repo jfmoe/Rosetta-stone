@@ -38,17 +38,20 @@
 
     <?php
         require_once  '../inc/db.php';
+        require_once  '../inc/common.php';
         $query = $db->prepare('select * from articles where article_id =:id');
         $query->bindValue(':id',$_GET['id'],PDO::PARAM_INT);
         $query->execute();
         $article = $query->fetchObject();
+
+        $user = get_user($article->author_id)
     ?>
     <--文章-->
     <div class="the-article" >
         <h1><?php echo $article->title?></h1>
         <div class="message">
             <img src="../assets/image/my.jpg" class="head-img">
-            <a class="author" href="../user/show.php">Manymeanings</a>
+            <a class="author" href="../user/show.php"><?php echo $user->nickname?></a>
             <span class="time-in"><?php echo $article->article_created_time?></span>
         </div>
         <pre><?php echo $article->body?></pre>
@@ -66,18 +69,19 @@
     <div class="aside-in-articles">
         <div class="mini-userzone">
             <img src="../assets/image/my.jpg">
-            <a class="name-in-miniaside" href="../user/show.php">ManyMeanings</a>
-            <span class="home">（浙江台州）</span>
-            <p>本来以为是很简单的网站，但是要把所有的功能都做出来还是很麻烦的。github地址：https://github.com/ManyMeanings</p>
-            <div class="data-in-miniaside">文章:1篇 &nbsp;&nbsp;星辰:1颗</div>
+            <a class="name-in-miniaside" href="../user/show.php"><?php echo $user->nickname?></a>
+            <span class="home">（<?php echo $user->address?>）</span>
+            <p><?php echo $user->Self_introduction?></p>
+            <div class="data-in-miniaside">文章:<?php echo get_number("select * from articles where article_is_delete=0 and author_id=" . $user->user_id)?>篇 &nbsp;&nbsp;星辰:1颗</div>
         </div>
         <div class="articles-in-aside">
-            <div class="title-in-aside">ManyMeanings的新文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../user/show.php">(全部)</a></div>
-            <div class="new-articles"><a href="../user/show.php">孤独有毒</a>&nbsp;(5颗星星)</div>
-            <div class="new-articles"><a href="../user/show.php">第二篇文章</a>&nbsp;(6颗星星)</div>
-            <div class="new-articles"><a href="../user/show.php">The Third Article</a>&nbsp;(7颗星星)</div>
-            <div class="new-articles"><a href="../user/show.php">123456</a>&nbsp;(8颗星星)</div>
-            <div class="new-articles"><a href="../user/show.php">凑数的</a>&nbsp;(123颗星星)</div>
+            <div class="title-in-aside"><?php echo $user->nickname?>的新文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../user/show.php">(全部)</a></div>
+            <?php
+                $query = $db->query("select * from articles where author_id =".$user->user_id." and article_is_delete=0 order by article_updated_time desc");
+                for($i=0;$i<5;$i++)
+                {$article1 = $query->fetchObject();?>
+                <div class="new-articles"><a href="../user/show.php"><?php echo $article1->title ?></a>&nbsp;(5颗星星)</div>
+                <?php  } ?>
         </div>
         <div class="articles-in-aside">
             <div class="title-in-aside">近期热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../index.php">(去主页)</a></div>
@@ -94,11 +98,12 @@
         $query = $db->query('select * from comments where comment_is_delete=0 and article_id_in_comment = ' . $_GET['id']);
         while ( $comment =  $query->fetchObject() ) {
         ?>
+        <?php $commentator = get_user($comment->commentator_id)?>
         <div class="comment-block">
         <img src="../assets/image/my.jpg">
             <div class="title-in-comment">
             <span class="time-in-comment"><?php echo $comment->comment_created_time; ?></span>
-            <a class="author-in-comment" href="../user/show.php">ManyMeanings</a>
+            <a class="author-in-comment" href="../user/show.php"><?php echo $commentator->nickname?></a>
             </div>
         <p><?php echo $comment->comment_body; ?></p>
             <form action="../comments/destroy.php" method="post">

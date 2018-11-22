@@ -17,8 +17,6 @@
     require_once 'inc/fun_paging.php';
     require_once 'inc/common.php';
 
-    if(is_login()) echo '当前用户: ' . current_user()->name ;
-
     $sql = "select * from articles where article_is_delete=0";
     $db1  = $db->query($sql)->fetchAll();
     $total = count($db1);
@@ -32,6 +30,7 @@
     $end=($cpage==$pagenum)?$total : ($cpage*$num);//结束记录页
     $next=($cpage==$pagenum)? 0:($cpage+1);//下一页
     $prev=($cpage==1)? 0:($cpage-1);//前一页
+
 ?>
 <div class="content">
 
@@ -122,32 +121,6 @@
                 <div class="hot-articles"><a href="user/show.php">凑数的</a><p>ManyMeanings&nbsp;555555人浏览<p></div>
             </div>
         </div>
-        <!--右侧栏-->
-        <!--<div class="aside">
-            <form action="index.php" method="post">
-                <ul>
-                    <li>
-                        <div class="text">
-                            <span class="user"></span><input type="text" placeholder="IconDeposit">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="password">
-                            <span class="key"></span><input type="password" placeholder="••••••••••••••">
-                        </div>
-                    </li>
-                    <li class="remember">
-                        <input type="checkbox">Remember Me
-                    </li>
-                    <li>
-                        <a href="">Forgot username or password?</a>
-                    </li>
-                    <li>
-                        <input type="button" value="Login">
-                    </li>
-                </ul>
-            </form>
-        </div>-->
     </div>
 </div>
 <div class="footer">© 2001－2018 mangyuan.com, all rights reserved 杭州电子科技大学莽原文学社</div>

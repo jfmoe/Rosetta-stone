@@ -30,9 +30,8 @@
             $_SESSION['user_id'] =  $user->user_id;
             if($remember_me){
                 $expire_time =  24*3600*30 ;
-                session_set_cookie_params($expire_time);
-                //setcookie("name", $name, time()+$expire_time);
-                //setcookie("pwd", $pwd, time()+$expire_time);
+                //session_set_cookie_params($expire_time);
+                setcookie("name", $name, time()+$expire_time);
             }
             set_notice("欢迎您：{$name} 来到本站!");
             return $user;
