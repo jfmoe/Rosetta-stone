@@ -7,7 +7,7 @@
     <title>个人中心</title>
     <link rel="short icon" href="../assets/image/club.ico">
     <link rel="stylesheet" type="text/css" href="../assets/css/mycss.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/userzone.css"
+    <link rel="stylesheet" type="text/css" href="../assets/css/userzone.css">
 </head>
 <body>
 <div class="content">
@@ -15,9 +15,9 @@
     <div class="global-nav">
         <ul>
             <li><a href="../index.php">主页</a></li>
-            <li><a href="show.html">用户</a></li>
+            <li><a href="show.php">用户</a></li>
             <li><a href="../about.html">关于</a></li>
-            <li style="float:right; padding-right: 15px"><a href="show.html">ManyMeanings</a></li>
+            <li style="float:right; padding-right: 15px"><a href="show.php">ManyMeanings</a></li>
         </ul>
     </div>
 
@@ -46,7 +46,7 @@
 
         <--文章-->
         <div class="articles-to-show">
-            <div class="title-in-this">ManyMeanings的文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="show.html">(全部)</a></div>
+            <div class="title-in-this">ManyMeanings的文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="show.php">(全部)</a></div>
             <div class="show-articles-blocks">
                 <a class="title-in-show">孤独有毒</a>
                 <div class="time-in-show">2018-10-02 00:00:00</div>
@@ -65,7 +65,7 @@
         </div>
 
         <div class="books-to-show">
-            <div class="title-in-this">ManyMeanings的书&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="show.html">(全部)</a></div>
+            <div class="title-in-this">ManyMeanings的书&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="show.php">(全部)</a></div>
             <div>
                 <span class="book-tip">读过</span>
                 <img src="../assets/image/book.jpg">
@@ -77,7 +77,7 @@
         </div>
 
         <div class="tv-to-show">
-            <div class="title-in-this">ManyMeanings的影视&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="show.html">(全部)</a></div>
+            <div class="title-in-this">ManyMeanings的影视&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="show.php">(全部)</a></div>
             <div>
                 <span class="book-tip">看过</span>
                 <img src="../assets/image/break.jpg">
@@ -108,21 +108,21 @@
         </div>
 
         <div class="articles-in-aside">
-            <div class="title-in-aside">ManyMeanings的热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="show.html">(全部)</a></div>
-            <div class="new-articles"><a href="show.html">孤独有毒</a>&nbsp;(5颗星星)</div>
-            <div class="new-articles"><a href="show.html">第二篇文章</a>&nbsp;(6颗星星)</div>
-            <div class="new-articles"><a href="show.html">The Third Article</a>&nbsp;(7颗星星)</div>
-            <div class="new-articles"><a href="show.html">123456</a>&nbsp;(8颗星星)</div>
-            <div class="new-articles"><a href="show.html">凑数的</a>&nbsp;(123颗星星)</div>
+            <div class="title-in-aside">ManyMeanings的热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="show.php">(全部)</a></div>
+            <div class="new-articles"><a href="show.php">孤独有毒</a>&nbsp;(5颗星星)</div>
+            <div class="new-articles"><a href="show.php">第二篇文章</a>&nbsp;(6颗星星)</div>
+            <div class="new-articles"><a href="show.php">The Third Article</a>&nbsp;(7颗星星)</div>
+            <div class="new-articles"><a href="show.php">123456</a>&nbsp;(8颗星星)</div>
+            <div class="new-articles"><a href="show.php">凑数的</a>&nbsp;(123颗星星)</div>
         </div>
 
         <div class="articles-in-aside">
             <div class="title-in-aside">ManyMeanings喜欢的文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../index.php">(去主页)</a></div>
-            <div class="hot-articles"><a href="show.html">孤独有毒</a><p>ManyMeanings&nbsp;10086人浏览<p></div>
-            <div class="hot-articles"><a href="show.html">第二篇文章</a><p>ManyMeanings&nbsp;233人浏览<p></div>
-            <div class="hot-articles"><a href="show.html">The Third Article</a><p>ManyMeanings&nbsp;8888人浏览<p></div>
-            <div class="hot-articles"><a href="show.html">123456</a><p>ManyMeanings&nbsp;12345人浏览<p></div>
-            <div class="hot-articles"><a href="show.html">凑数的</a><p>ManyMeanings&nbsp;555555人浏览<p></div>
+            <div class="hot-articles"><a href="show.php">孤独有毒</a><p>ManyMeanings&nbsp;10086人浏览<p></div>
+            <div class="hot-articles"><a href="show.php">第二篇文章</a><p>ManyMeanings&nbsp;233人浏览<p></div>
+            <div class="hot-articles"><a href="show.php">The Third Article</a><p>ManyMeanings&nbsp;8888人浏览<p></div>
+            <div class="hot-articles"><a href="show.php">123456</a><p>ManyMeanings&nbsp;12345人浏览<p></div>
+            <div class="hot-articles"><a href="show.php">凑数的</a><p>ManyMeanings&nbsp;555555人浏览<p></div>
         </div>
 
     </div>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="ManyMeanings">
     <base href="index.hml">
+    <link rel="stylesheet" type="text/css" href="assets/css/articles.css">
     <link rel="stylesheet" type="text/css" href="assets/css/mycss.css">
     <title>莽原</title>
     <link rel="short icon" href="assets/image/club.ico">
@@ -18,7 +19,7 @@
 
     if(is_login()) echo '当前用户: ' . current_user()->name ;
 
-    $sql = "select * from articles";
+    $sql = "select * from articles where article_is_delete=0";
     $db1  = $db->query($sql)->fetchAll();
     $total = count($db1);
     $num = 4;
@@ -38,9 +39,10 @@
     <div class="global-nav">
         <ul>
             <li><a href="index.php">主页</a></li>
-            <li><a href="user/show.html">用户</a></li>
+            <li><a href="user/show.php">用户</a></li>
             <li><a href="about.html">关于</a></li>
-            <li style="float:right; padding-right: 15px"><a href="<?php if(is_login()) echo 'user/show.html';else echo 'user/index.php'?>"><?php if(is_login()) echo current_user()->nickname;else echo '登录'?></a></li>
+            <li><a href="user/index.php">登录界面（临时）</a></li>
+            <li style="float:right; padding-right: 15px"><a href="<?php if(is_login()) echo 'user/show.php';else echo 'user/index.php'?>"><?php if(is_login()) echo current_user()->nickname;else echo '登录'?></a></li>
         </ul>
     </div>
 
@@ -78,7 +80,7 @@
                         <div><img src="assets/image/my.jpg"></div>
                         <div style="color:#9d9d9d ;
                     font-family: Helvetica, Arial, sans-serif ;
-                    font-size: 14px"><a class="name" href="user/show.html">ManyMeanings</a> 的文章:
+                    font-size: 14px"><a class="name" href="user/show.php">ManyMeanings</a> 的文章:
                         </div>
                         <div class="article">
                             <a class="titles"
@@ -95,8 +97,33 @@
                         echo "</div>"
                     ?>
         </div>
+        <--侧边栏-->
+        <div class="aside-in-articles">
+            <div class="books-hot">
+                <div class="title-in-aside">最近热门的书&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="index.php">(全部)</a></div>
+                <img class="hot-books" src="assets/image/book.jpg">
+                <img class="hot-books" src="assets/image/book.jpg">
+            </div>
+
+            <div class="articles-in-aside">
+                <div class="title-in-aside">ManyMeanings的新文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="user/show.php">(全部)</a></div>
+                <div class="new-articles"><a href="user/show.php">孤独有毒</a>&nbsp;(5颗星星)</div>
+                <div class="new-articles"><a href="user/show.php">第二篇文章</a>&nbsp;(6颗星星)</div>
+                <div class="new-articles"><a href="user/show.php">The Third Article</a>&nbsp;(7颗星星)</div>
+                <div class="new-articles"><a href="user/show.php">123456</a>&nbsp;(8颗星星)</div>
+                <div class="new-articles"><a href="user/show.php">凑数的</a>&nbsp;(123颗星星)</div>
+            </div>
+            <div class="articles-in-aside">
+                <div class="title-in-aside">近期热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="index.php">(去主页)</a></div>
+                <div class="hot-articles"><a href="user/show.php">孤独有毒</a><p>ManyMeanings&nbsp;10086人浏览<p></div>
+                <div class="hot-articles"><a href="user/show.php">第二篇文章</a><p>ManyMeanings&nbsp;233人浏览<p></div>
+                <div class="hot-articles"><a href="user/show.php">The Third Article</a><p>ManyMeanings&nbsp;8888人浏览<p></div>
+                <div class="hot-articles"><a href="user/show.php">123456</a><p>ManyMeanings&nbsp;12345人浏览<p></div>
+                <div class="hot-articles"><a href="user/show.php">凑数的</a><p>ManyMeanings&nbsp;555555人浏览<p></div>
+            </div>
+        </div>
         <!--右侧栏-->
-        <div class="aside">
+        <!--<div class="aside">
             <form action="index.php" method="post">
                 <ul>
                     <li>
@@ -120,7 +147,7 @@
                     </li>
                 </ul>
             </form>
-        </div>
+        </div>-->
     </div>
 </div>
 <div class="footer">© 2001－2018 mangyuan.com, all rights reserved 杭州电子科技大学莽原文学社</div>

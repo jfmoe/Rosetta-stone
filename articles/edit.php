@@ -11,6 +11,7 @@
 <body>
 <?php
     require_once '../inc/db.php';
+    require_once '../inc/session.php';
     $id = $_GET['id'];
     $query = $db->prepare('select * from articles where article_id = :id');
     $query->bindValue(':id',$id,PDO::PARAM_INT);

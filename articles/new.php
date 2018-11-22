@@ -9,6 +9,10 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/submit.css" >
 </head>
 <body>
+<?php
+require_once '../inc/session.php';
+authenticate_user();
+?>
 <div class="edit-area">
     <form action="save.php" method="post" >
         <div class="top-title">

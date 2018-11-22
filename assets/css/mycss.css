@@ -207,7 +207,7 @@ ul.pagination li a:hover:not(.active) {
 }
 
 /*侧边栏*/
-.aside {
+/*.aside {
     float: left;
     margin-left: 90px;
     background-color: #edf4ed;
@@ -289,7 +289,7 @@ ul.pagination li a:hover:not(.active) {
     border:1px solid #cccccc;
     border-radius: 4px;
 }
-/*Display the tick inside the checkbox*/
+/*Display the tick inside the checkbox
 .remember label:after {
     opacity: 0.4;
     content: '';
@@ -309,11 +309,11 @@ ul.pagination li a:hover:not(.active) {
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
-/*Create the hover event of the tick*/
+/*Create the hover event of the tick
 .remember label:hover::after {
     opacity: 0.7;
 }
-/*Create the checkbox state for the tick*/
+/*Create the checkbox state for the tick
 .remember input[type=checkbox]:checked + label:after {
     opacity: 1;
     border-color: #74884a;
@@ -408,6 +408,12 @@ ul.pagination li a:hover:not(.active) {
     text-shadow:
             0 1px 0 rgba(000,000,000,0.3),
             0 0 0 rgba(255,255,255,0);
+}*/
+.hot-books {
+    height: 126px;
+    width: 85px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    border: #dddddd solid 1px;
 }
-
 

@@ -10,14 +10,15 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/articles.css">
 </head>
 <body>
+<?php require_once '../inc/session.php'?>
 <div class="content">
     <!--上方导航栏-->
     <div class="global-nav">
         <ul>
             <li><a href="../index.php">主页</a></li>
-            <li><a href="../user/show.html">用户</a></li>
+            <li><a href="../user/show.php">用户</a></li>
             <li><a href="../about.html">关于</a></li>
-            <li style="float:right; padding-right: 15px"><a href="../user/show.html">ManyMeanings</a></li>
+            <li style="float:right; padding-right: 15px"><a href="<?php if(is_login()) echo '../user/show.php';else echo '../user/index.php'?>"><?php if(is_login()) echo current_user()->nickname;else echo '登录'?></a></li>
         </ul>
     </div>
 
@@ -47,7 +48,7 @@
         <h1><?php echo $article->title?></h1>
         <div class="message">
             <img src="../assets/image/my.jpg" class="head-img">
-            <a class="author" href="../user/show.html">Manymeanings</a>
+            <a class="author" href="../user/show.php">Manymeanings</a>
             <span class="time-in"><?php echo $article->article_created_time?></span>
         </div>
         <pre><?php echo $article->body?></pre>
@@ -56,53 +57,53 @@
             <a class="good">星星</a>
             <form action="destroy.php" method="post">
                 <input type="hidden" name="id" value = "<?php echo $article->article_id; ?>"/>
-                <input class="change-button" type="submit" value="删除" onclick="return confirm('是否确定删除本篇文章？')">
+                <input <?php if(!is_user_right($article->author_id)) echo "style='display: none;'"?>class="change-button" type="submit" value="删除" onclick="return confirm('是否确定删除本篇文章？')">
             </form>
-            <div><a class="change-button" href="edit.php?id=<?php echo $article->article_id; ?>">修改</a></div>
+            <div><a <?php if(!is_user_right($article->author_id)) echo "style='display: none;'"?>class="change-button" href="edit.php?id=<?php echo $article->article_id; ?>">修改</a></div>
     </div>
     </div>
     <--侧边栏-->
     <div class="aside-in-articles">
         <div class="mini-userzone">
             <img src="../assets/image/my.jpg">
-            <a class="name-in-miniaside" href="../user/show.html">ManyMeanings</a>
+            <a class="name-in-miniaside" href="../user/show.php">ManyMeanings</a>
             <span class="home">（浙江台州）</span>
             <p>本来以为是很简单的网站，但是要把所有的功能都做出来还是很麻烦的。github地址：https://github.com/ManyMeanings</p>
             <div class="data-in-miniaside">文章:1篇 &nbsp;&nbsp;星辰:1颗</div>
         </div>
         <div class="articles-in-aside">
-            <div class="title-in-aside">ManyMeanings的新文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../user/show.html">(全部)</a></div>
-            <div class="new-articles"><a href="../user/show.html">孤独有毒</a>&nbsp;(5颗星星)</div>
-            <div class="new-articles"><a href="../user/show.html">第二篇文章</a>&nbsp;(6颗星星)</div>
-            <div class="new-articles"><a href="../user/show.html">The Third Article</a>&nbsp;(7颗星星)</div>
-            <div class="new-articles"><a href="../user/show.html">123456</a>&nbsp;(8颗星星)</div>
-            <div class="new-articles"><a href="../user/show.html">凑数的</a>&nbsp;(123颗星星)</div>
+            <div class="title-in-aside">ManyMeanings的新文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../user/show.php">(全部)</a></div>
+            <div class="new-articles"><a href="../user/show.php">孤独有毒</a>&nbsp;(5颗星星)</div>
+            <div class="new-articles"><a href="../user/show.php">第二篇文章</a>&nbsp;(6颗星星)</div>
+            <div class="new-articles"><a href="../user/show.php">The Third Article</a>&nbsp;(7颗星星)</div>
+            <div class="new-articles"><a href="../user/show.php">123456</a>&nbsp;(8颗星星)</div>
+            <div class="new-articles"><a href="../user/show.php">凑数的</a>&nbsp;(123颗星星)</div>
         </div>
         <div class="articles-in-aside">
             <div class="title-in-aside">近期热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../index.php">(去主页)</a></div>
-            <div class="hot-articles"><a href="../user/show.html">孤独有毒</a><p>ManyMeanings&nbsp;10086人浏览<p></div>
-            <div class="hot-articles"><a href="../user/show.html">第二篇文章</a><p>ManyMeanings&nbsp;233人浏览<p></div>
-            <div class="hot-articles"><a href="../user/show.html">The Third Article</a><p>ManyMeanings&nbsp;8888人浏览<p></div>
-            <div class="hot-articles"><a href="../user/show.html">123456</a><p>ManyMeanings&nbsp;12345人浏览<p></div>
-            <div class="hot-articles"><a href="../user/show.html">凑数的</a><p>ManyMeanings&nbsp;555555人浏览<p></div>
+            <div class="hot-articles"><a href="../user/show.php">孤独有毒</a><p>ManyMeanings&nbsp;10086人浏览<p></div>
+            <div class="hot-articles"><a href="../user/show.php">第二篇文章</a><p>ManyMeanings&nbsp;233人浏览<p></div>
+            <div class="hot-articles"><a href="../user/show.php">The Third Article</a><p>ManyMeanings&nbsp;8888人浏览<p></div>
+            <div class="hot-articles"><a href="../user/show.php">123456</a><p>ManyMeanings&nbsp;12345人浏览<p></div>
+            <div class="hot-articles"><a href="../user/show.php">凑数的</a><p>ManyMeanings&nbsp;555555人浏览<p></div>
         </div>
     </div>
     <--评论-->
     <div class="comments" id="place">
         <?php
-        $query = $db->query('select * from comments where article_id_in_comment = ' . $_GET['id']);
+        $query = $db->query('select * from comments where comment_is_delete=0 and article_id_in_comment = ' . $_GET['id']);
         while ( $comment =  $query->fetchObject() ) {
         ?>
         <div class="comment-block">
         <img src="../assets/image/my.jpg">
             <div class="title-in-comment">
             <span class="time-in-comment"><?php echo $comment->comment_created_time; ?></span>
-            <a class="author-in-comment" href="../user/show.html">ManyMeanings</a>
+            <a class="author-in-comment" href="../user/show.php">ManyMeanings</a>
             </div>
         <p><?php echo $comment->comment_body; ?></p>
             <form action="../comments/destroy.php" method="post">
                 <input type="hidden" name="id" value = "<?php echo $comment->comment_id; ?>"/>
-                <input class="comment-delete-button" type="submit" value="删除" onclick="return confirm('是否确定删除这条评论？')">
+                <input <?php if(!is_user_right($comment->commentator_id)) echo "style='display: none;'"?> class="comment-delete-button" type="submit" value="删除" onclick="return confirm('是否确定删除这条评论？')">
             </form>
         <div class="reply-button">回复</div>
     </div>

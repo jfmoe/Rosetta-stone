@@ -29,8 +29,10 @@
         if($user && encrypt_password($pwd) == $user->user_password){
             $_SESSION['user_id'] =  $user->user_id;
             if($remember_me){
-                $expire_time =  7*24*3600*100 ;
+                $expire_time =  24*3600*30 ;
                 session_set_cookie_params($expire_time);
+                //setcookie("name", $name, time()+$expire_time);
+                //setcookie("pwd", $pwd, time()+$expire_time);
             }
             set_notice("欢迎您：{$name} 来到本站!");
             return $user;
@@ -83,10 +85,22 @@
         return $user;
     }
 
+    function is_user_right($id){
+        if(is_login()){
+            if($id == $_SESSION['user_id']) return true;
+            else {return false;}
+        }else{
+            return false;
+        }
+    }
+
     function authenticate_user(){
         if(!is_login()){
             set_notice('必须登录后方可使用本功能');
-            redirect_to('/user/');
+            redirect_to('../user/');
+            return false;
+        }else{
+            return true;
         }
 
     }
