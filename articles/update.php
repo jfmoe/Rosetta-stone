@@ -1,8 +1,10 @@
 <?php
 
+    require_once '../inc/session.php';
     require_once '../inc/db.php';
     require_once '../inc/common.php';
 
+    if(authenticate_user()){
     $id = $_POST['id'];
     $sql = "update articles set title = :title, body = :body ,article_updated_time = :article_updated_time where article_id = :id; " ;
     $query = $db->prepare($sql);
@@ -19,4 +21,4 @@
     }else{
         redirect_to("show.php?id={$id}");
         ChromePhp::log($query);
-    };
+    };}

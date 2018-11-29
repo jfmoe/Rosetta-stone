@@ -10,6 +10,16 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/userzone.css">
 </head>
 <body>
+<?php
+    require_once '../inc/session.php';
+    require_once  '../inc/db.php';
+    require_once  '../inc/common.php';
+
+    $query = $db->prepare('select * from users where user_id =:id');
+    $query->bindValue(':id',$_GET['id'],PDO::PARAM_INT);
+    $query->execute();
+    $user = $query->fetchObject();
+?>
 <div class="content">
     <!--上方导航栏-->
     <div class="global-nav">
@@ -17,7 +27,7 @@
             <li><a href="../index.php">主页</a></li>
             <li><a href="show.php">用户</a></li>
             <li><a href="../about.html">关于</a></li>
-            <li style="float:right; padding-right: 15px"><a href="show.php">ManyMeanings</a></li>
+            <li style="float:right; padding-right: 15px"><a href="<?php if(is_login()) echo "show.php?id=".current_user()->user_id; else echo 'index.php'?>"><?php if(is_login()) echo current_user()->nickname;else echo '登录'?></a></li>
         </ul>
     </div>
 
@@ -40,28 +50,23 @@
         <--头-->
         <div class="head-in-message">
             <img src="../assets/image/my.jpg" class="img-in-headmsg">
-            <span class="name-in-message">ManyMeanings</span><br>
-            <span class="sth-to-say">吾好梦中杀人</span>
+            <span class="name-in-message"><?php echo $user->nickname?></span><br>
+            <span class="sth-to-say"><?php echo $user->saying?></span>
         </div>
 
         <--文章-->
         <div class="articles-to-show">
-            <div class="title-in-this">ManyMeanings的文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="show.php">(全部)</a></div>
-            <div class="show-articles-blocks">
-                <a class="title-in-show">孤独有毒</a>
-                <div class="time-in-show">2018-10-02 00:00:00</div>
-                <p>现在好多视频网站都有弹幕，刚知道有那玩意儿时我还不懂，为什么看个视频还要忍受被一排排字挡住画面的痛苦，后来渐渐明白，这是一群孤独的人相拥取暖的地方。一个人低头数着进度条，看到精彩处，浑身寒毛炸起，可是身边却没有一个能听你吐槽的人。</p>
-            </div>
-            <div class="show-articles-blocks">
-                <a class="title-in-show">孤独有毒</a>
-                <div class="time-in-show">2018-10-02 00:00:00</div>
-                <p>现在好多视频网站都有弹幕，刚知道有那玩意儿时我还不懂，为什么看个视频还要忍受被一排排字挡住画面的痛苦，后来渐渐明白，这是一群孤独的人相拥取暖的地方。一个人低头数着进度条，看到精彩处，浑身寒毛炸起，可是身边却没有一个能听你吐槽的人。</p>
-            </div>
-            <div class="show-articles-blocks">
-                <a class="title-in-show">孤独有毒</a>
-                <div class="time-in-show">2018-10-02 00:00:00</div>
-                <p>现在好多视频网站都有弹幕，刚知道有那玩意儿时我还不懂，为什么看个视频还要忍受被一排排字挡住画面的痛苦，后来渐渐明白，这是一群孤独的人相拥取暖的地方。一个人低头数着进度条，看到精彩处，浑身寒毛炸起，可是身边却没有一个能听你吐槽的人。</p>
-            </div>
+            <div class="title-in-this"><?php echo $user->nickname?>的文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="detail.php?id=<?php print $user->user_id?>">(全部)</a></div>
+            <?php
+                $query = $db->query("select * from articles where author_id =".$user->user_id." and article_is_delete=0 order by article_updated_time desc");
+                for($i=0;$i<3;$i++)
+                {if($article = $query->fetchObject()){?>
+                    <div class="show-articles-blocks">
+                        <a class="title-in-show" href="../articles/show.php?id=<?php print $article->article_id ?>"><?= $article->title?></a>
+                        <div class="time-in-show"><?= $article->article_updated_time?></div>
+                        <p><?= subtext($article->body, 120); ?></p>
+                    </div>
+                <?php  }} ?>
         </div>
 
         <div class="books-to-show">
@@ -94,11 +99,11 @@
     <div class="message-in-aside">
         <div class="msg-card">
             <img src="../assets/image/my.jpg">
-            <span class="place">常居：浙江台州</span><br>
-            <span class="time-to-join">2018-10-02&nbsp;加入</span><br>
-            <span class="star">星辰：2颗</span>
+            <span class="place">常居：<?php echo $user->address ?></span><br>
+            <span class="time-to-join"><?php echo $user->registered_time?>&nbsp;加入</span><br>
+            <span class="star">星辰：<?php echo get_star_light($user->user_id)?>颗</span>
             <div class="line"></div>
-            <div class="word">本来以为是很简单的网站，但是要把所有的功能都做出来还是很麻烦的。github地址：https://github.com/ManyMeanings</div>
+            <div class="word"><?php echo $user->Self_introduction?></div>
         </div>
 
         <div class="books-in-read">
@@ -108,21 +113,25 @@
         </div>
 
         <div class="articles-in-aside">
-            <div class="title-in-aside">ManyMeanings的热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="show.php">(全部)</a></div>
-            <div class="new-articles"><a href="show.php">孤独有毒</a>&nbsp;(5颗星星)</div>
-            <div class="new-articles"><a href="show.php">第二篇文章</a>&nbsp;(6颗星星)</div>
-            <div class="new-articles"><a href="show.php">The Third Article</a>&nbsp;(7颗星星)</div>
-            <div class="new-articles"><a href="show.php">123456</a>&nbsp;(8颗星星)</div>
-            <div class="new-articles"><a href="show.php">凑数的</a>&nbsp;(123颗星星)</div>
+            <div class="title-in-aside"><?php echo $user->nickname?>的热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="show.php">(全部)</a></div>
+            <?php
+                $query = $db->prepare("select article_id, nickname, title, get_read, get_stars, get_read*0.25+get_stars*0.75 as rank from hot_articles where author_id = ".$user->user_id." order by rank desc limit 0,5;");
+                $query->execute();
+                $hot_articles = $query->fetchAll();
+                foreach($hot_articles as $value):?>
+                    <div class="hot-articles"><a href="../articles/show.php?id=<?= $value["article_id"] ?>"><?= $value["title"]?></a><p><?= $value["nickname"]?>&nbsp;<?= $value["get_read"]?>人浏览<p></div>
+                <?php  endforeach;?>
         </div>
 
         <div class="articles-in-aside">
-            <div class="title-in-aside">ManyMeanings喜欢的文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../index.php">(去主页)</a></div>
-            <div class="hot-articles"><a href="show.php">孤独有毒</a><p>ManyMeanings&nbsp;10086人浏览<p></div>
-            <div class="hot-articles"><a href="show.php">第二篇文章</a><p>ManyMeanings&nbsp;233人浏览<p></div>
-            <div class="hot-articles"><a href="show.php">The Third Article</a><p>ManyMeanings&nbsp;8888人浏览<p></div>
-            <div class="hot-articles"><a href="show.php">123456</a><p>ManyMeanings&nbsp;12345人浏览<p></div>
-            <div class="hot-articles"><a href="show.php">凑数的</a><p>ManyMeanings&nbsp;555555人浏览<p></div>
+            <div class="title-in-aside"><?php echo $user->nickname?>喜欢的文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../index.php">(全部)</a></div>
+            <?php
+                $query = $db->prepare("select article_like.article_id as article_id, nickname, title, get_read, get_stars from (articles join article_like join users) where article_like.article_id = articles.article_id and articles.author_id = users.user_id and article_like.user_id = ".$user->user_id." order by like_time desc limit 0,5;");
+                $query->execute();
+                $hot_articles = $query->fetchAll();
+                foreach($hot_articles as $value):?>
+                    <div class="hot-articles"><a href="../articles/show.php?id=<?= $value["article_id"] ?>"><?= $value["title"]?></a><p><?= $value["nickname"]?>&nbsp;<?= $value["get_read"]?>人浏览<p></div>
+                <?php  endforeach;?>
         </div>
 
     </div>

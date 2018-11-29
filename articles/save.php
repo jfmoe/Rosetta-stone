@@ -4,6 +4,7 @@
     require_once '../inc/db.php';
     require_once '../inc/common.php';
 
+    if(authenticate_user()){
     $sql = "insert into articles(title,body,article_created_time,article_updated_time,author_id) values(:title,:body,:article_created_time,:article_created_time,:author_id);" ;
     $query = $db->prepare($sql);
     $query->bindParam(':title',$_POST['title'],PDO::PARAM_STR);
@@ -20,4 +21,4 @@
     }else{
         $article = $query->fetchObject();
         redirect_to("../");
-    };
+    };}

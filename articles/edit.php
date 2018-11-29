@@ -12,11 +12,15 @@
 <?php
     require_once '../inc/db.php';
     require_once '../inc/session.php';
+    authenticate_user();
     $id = $_GET['id'];
     $query = $db->prepare('select * from articles where article_id = :id');
     $query->bindValue(':id',$id,PDO::PARAM_INT);
     $query->execute();
     $article = $query->fetchObject();
+    if(!is_user_right($article->author_id)){
+        redirect_back();
+    }
 ?>
 <div class="edit-area">
     <form action="update.php" method="post">

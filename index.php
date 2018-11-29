@@ -41,7 +41,7 @@
             <li><a href="user/show.php">用户</a></li>
             <li><a href="about.html">关于</a></li>
             <li><a href="user/index.php">登录界面（临时）</a></li>
-            <li style="float:right; padding-right: 15px"><a href="<?php if(is_login()) echo 'user/show.php';else echo 'user/index.php'?>"><?php if(is_login()) echo current_user()->nickname;else echo '登录'?></a></li>
+            <li style="float:right; padding-right: 15px"><a href="<?php if(is_login()) echo "user/show.php?id=".current_user()->user_id; else echo 'user/index.php'?>"><?php if(is_login()) echo current_user()->nickname;else echo '登录'?></a></li>
         </ul>
     </div>
 
@@ -73,13 +73,13 @@
         <div class="articles">
 
             <?php
-                //while( $article = $query->fetchObject() ) {
-                foreach ($result as $value): ?>
+                foreach ($result as $value):
+                    $user = get_user($value['author_id'])?>
                     <div class="article-block">
                         <div><img src="assets/image/my.jpg"></div>
                         <div style="color:#9d9d9d ;
                     font-family: Helvetica, Arial, sans-serif ;
-                    font-size: 14px"><a class="name" href="user/show.php">ManyMeanings</a> 的文章:
+                    font-size: 14px"><a class="name" href="user/show.php?id=<?php echo $user->user_id?>"><?php echo $user->nickname?></a> 的文章:
                         </div>
                         <div class="article">
                             <a class="titles"
@@ -105,20 +105,14 @@
             </div>
 
             <div class="articles-in-aside">
-                <div class="title-in-aside">ManyMeanings的新文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="user/show.php">(全部)</a></div>
-                <div class="new-articles"><a href="user/show.php">孤独有毒</a>&nbsp;(5颗星星)</div>
-                <div class="new-articles"><a href="user/show.php">第二篇文章</a>&nbsp;(6颗星星)</div>
-                <div class="new-articles"><a href="user/show.php">The Third Article</a>&nbsp;(7颗星星)</div>
-                <div class="new-articles"><a href="user/show.php">123456</a>&nbsp;(8颗星星)</div>
-                <div class="new-articles"><a href="user/show.php">凑数的</a>&nbsp;(123颗星星)</div>
-            </div>
-            <div class="articles-in-aside">
                 <div class="title-in-aside">近期热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="index.php">(去主页)</a></div>
-                <div class="hot-articles"><a href="user/show.php">孤独有毒</a><p>ManyMeanings&nbsp;10086人浏览<p></div>
-                <div class="hot-articles"><a href="user/show.php">第二篇文章</a><p>ManyMeanings&nbsp;233人浏览<p></div>
-                <div class="hot-articles"><a href="user/show.php">The Third Article</a><p>ManyMeanings&nbsp;8888人浏览<p></div>
-                <div class="hot-articles"><a href="user/show.php">123456</a><p>ManyMeanings&nbsp;12345人浏览<p></div>
-                <div class="hot-articles"><a href="user/show.php">凑数的</a><p>ManyMeanings&nbsp;555555人浏览<p></div>
+                <?php
+                    $query = $db->prepare("select article_id, nickname, title, get_read, get_stars, get_read*0.25+get_stars*0.75 as rank from hot_articles order by rank desc limit 0,5;");
+                    $query->execute();
+                    $hot_articles = $query->fetchAll();
+                    foreach($hot_articles as $value):?>
+                      <div class="hot-articles"><a href="articles/show.php?id=<?= $value["article_id"] ?>"><?= $value["title"]?></a><p><?= $value["nickname"]?>&nbsp;<?= $value["get_read"]?>人浏览<p></div>
+                    <?php  endforeach;?>
             </div>
         </div>
     </div>

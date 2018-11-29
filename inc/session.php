@@ -103,3 +103,12 @@
         }
 
     }
+    function authenticate_user_not_redirect(){
+        if(!is_login()){
+            set_notice('必须登录后方可使用本功能');
+            return false;
+        }else{
+            return true;
+        }
+
+    }
