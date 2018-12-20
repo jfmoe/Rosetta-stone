@@ -79,9 +79,18 @@
         foreach($articles as $v):
             $get_read += $v["get_read"];
             $get_stars += $v["get_stars"];
-            endforeach;
+        endforeach;
         $star_light = 9 * ($article_number*0.2 + $get_stars*0.5 + $get_read*0.03)*0.01;
-        return $star_light;
+        
+        $sql = "update users set write_number = :write_number, had_geted_stars = :had_geted_stars ,star_light = :star_light, get_read_number = :get_read_number where user_id = :id; " ;
+        $query = $db->prepare($sql);
+        $query->bindValue(':write_number',$article_number,PDO::PARAM_STR);
+        $query->bindValue(':had_geted_stars',$get_stars,PDO::PARAM_STR);
+        $query->bindParam(':get_read_number',$get_read,PDO::PARAM_STR);
+        $query->bindParam(':star_light',$star_light,PDO::PARAM_STR);
+        $query->bindValue(':id',$user_id,PDO::PARAM_INT);
+        if(!$query->execute()) return false;
+        else return true;
     }
 
 

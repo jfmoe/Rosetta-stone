@@ -1,12 +1,25 @@
-function con(str){
-    var mymessage=confirm(str);
+function con(str) {
+    var mymessage = confirm(str);
 
-    if(mymessage)
-    {
+    if (mymessage) {
         document.write("你是女士!");
-    }
-    else
-    {
+    } else {
         document.write("你是男士!");
+    }
+}
+
+function altRows(id) {
+    if (document.getElementsByTagName) {
+
+        var table = document.getElementById(id);
+        var rows = table.getElementsByTagName("tr");
+
+        for (i = 0; i < rows.length; i++) {
+            if (i % 2 == 0) {
+                rows[i].className = "evenrowcolor";
+            } else {
+                rows[i].className = "oddrowcolor";
+            }
+        }
     }
 }

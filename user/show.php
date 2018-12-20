@@ -99,9 +99,9 @@
     <div class="message-in-aside">
         <div class="msg-card">
             <img src="../assets/image/my.jpg">
-            <span class="place">常居：<?php echo $user->address ?></span><br>
-            <span class="time-to-join"><?php echo $user->registered_time?>&nbsp;加入</span><br>
-            <span class="star">星辰：<?php echo get_star_light($user->user_id)?>颗</span>
+            <span class="place">常居：<?php echo $user->address ?></span>
+            <span class="time-to-join"><?php echo $user->registered_time ?>&nbsp;加入</span>
+            <span class="star">星光：<?php if(get_star_light($user->user_id)) echo $user->star_light ?>&nbsp;光年</span>
             <div class="line"></div>
             <div class="word"><?php echo $user->Self_introduction?></div>
         </div>

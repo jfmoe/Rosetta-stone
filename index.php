@@ -9,7 +9,9 @@
     <title>莽原</title>
     <link rel="short icon" href="assets/image/club.ico">
 </head>
+<style>
 
+</style>
 <body>
 <?php
     require_once 'inc/session.php';
