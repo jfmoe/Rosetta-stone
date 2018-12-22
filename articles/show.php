@@ -20,7 +20,12 @@
             <li><a href="../index.php">主页</a></li>
             <li><a href="../user/show.php">用户</a></li>
             <li><a href="../about.html">关于</a></li>
-            <li style="float:right; padding-right: 15px"><a href="<?php if(is_login()) echo "../user/show.php?id=".current_user()->user_id; else echo '../user/index.php'?>"><?php if(is_login()) echo current_user()->nickname;else echo '登录'?></a></li>
+            <li style="float:right; padding-right: 5px">
+                <a href="../user/login_delete.php" style="<?php if(!is_login()) echo "display: none" ?>"><?php if(is_login()) echo "登出"?></a></li>
+            <li style="float:right;">
+                <a href="../admin/" style="<?php if(!is_user_right(1)) echo "display: none" ?>"><?php if(is_login()) echo "后台"?></a></li>
+            <li style="float:right;">
+                <a href="<?php if(is_login()) echo "../user/show.php?id=".current_user()->user_id; else echo '../user/index.php'?>"><?php if(is_login()) echo "个人中心";else echo '登录'?></a></li>
         </ul>
     </div>
 
@@ -59,7 +64,7 @@
     <div class="the-article" >
         <h1><?php echo $article->title?></h1>
         <div class="message">
-            <img src="../assets/image/my.jpg" class="head-img">
+            <img src="../assets/upload/head/<?php echo $user->head_img ?>" class="head-img">
             <a class="author" href="../user/show.php?id=<?php echo $user->user_id?>"><?php echo $user->nickname?></a>
             <span class="time-in"><?php echo $article->article_created_time?></span>
         </div>
@@ -77,7 +82,7 @@
     <--侧边栏-->
     <div class="aside-in-articles">
         <div class="mini-userzone">
-            <img src="../assets/image/my.jpg">
+            <img src="../assets/upload/head/<?php echo $user->head_img ?>">
             <a class="name-in-miniaside" href="../user/show.php?id=<?php echo $user->user_id?>"><?php echo $user->nickname?></a>
             <span class="home">（<?php echo $user->address?>）</span>
             <p><?php echo $user->Self_introduction?></p>
@@ -111,7 +116,7 @@
         ?>
         <?php $commentator = get_user($comment->commentator_id)?>
         <div class="comment-block">
-        <img src="../assets/image/my.jpg">
+        <img src="../assets/upload/head/<?php echo $commentator->head_img ?>">
             <div class="title-in-comment">
             <span class="time-in-comment"><?php echo $comment->comment_created_time; ?></span>
             <a class="author-in-comment" href="../user/show.php?id=<?php echo $comment->commentator_id?>"><?php echo $commentator->nickname?></a>

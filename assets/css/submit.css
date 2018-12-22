@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-textarea, input {
+
+textarea,
+input {
     text-rendering: auto;
     color: initial;
     letter-spacing: normal;
@@ -14,34 +16,40 @@ textarea, input {
     text-align: start;
     font: 400 14px Arial;
 }
+
 .edit-area {
     height: 350px;
     position: absolute;
     left: 50%;
-    transform: translate(-50%,-0);
+    transform: translate(-50%, -0);
     width: 38%;
 }
+
 .top-title {
     /*background-color: #f8f8f8;*/
     padding-bottom: 70px;
 }
+
 #ui {
     height: 40px;
     float: left;
 }
+
 #submit {
     height: 40px;
     width: 40px;
     border: none;
     padding: 5px;
     background: url("../image/submit.png") no-repeat center;
-    background-size:20px 20px ;
-    outline:none;
+    background-size: 20px 20px;
+    outline: none;
     float: right;
 }
+
 #submit:hover {
     cursor: pointer;
 }
+
 #title {
     display: block;
     width: 100%;
@@ -53,6 +61,7 @@ textarea, input {
     font-weight: 600;
     margin-bottom: 20px;
 }
+
 #body {
     display: block;
     width: 100%;
@@ -65,14 +74,107 @@ textarea, input {
     font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-size: 13px;
     padding: 15px 0;
-    resize:none;
-    height:620px;
+    resize: none;
+    height: 620px;
     line-height: 1.8;
 }
+
 #body:focus {
-     outline: none;
+    outline: none;
 }
+
 #title:focus {
     outline: none;
 }
 
+.msg {
+    display: block;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    color: #797979;
+    font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: 300;
+}
+
+.in {
+    display: block;
+    width: 100%;
+    border: none;
+    color: #797979;
+    font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 20px;
+    resize: none;
+    height: 620px;
+    font-weight: 300;
+}
+
+.in:focus {
+    outline: none;
+}
+
+.msg:focus {
+    outline: none;
+}
+
+#head {
+    display: block;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    color: #797979;
+    font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: 300;
+
+}
+
+.a-upload {
+    padding: 2px 5px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-bottom: 20px;
+}
+
+.a-upload input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
+
+.tip {
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    color: #797979;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#head_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

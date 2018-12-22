@@ -27,7 +27,12 @@
             <li><a href="../index.php">主页</a></li>
             <li><a href="show.php">用户</a></li>
             <li><a href="../about.html">关于</a></li>
-            <li style="float:right; padding-right: 15px"><a href="<?php if(is_login()) echo "show.php?id=".current_user()->user_id; else echo 'index.php'?>"><?php if(is_login()) echo current_user()->nickname;else echo '登录'?></a></li>
+            <li style="float:right; padding-right: 5px">
+                <a href="../user/login_delete.php" style="<?php if(!is_login()) echo "display: none" ?>"><?php if(is_login()) echo "登出"?></a></li>
+            <li style="float:right;">
+                <a href="../admin/" style="<?php if(!is_user_right(1)) echo "display: none" ?>"><?php if(is_login()) echo "后台"?></a></li>
+            <li style="float:right;">
+                <a href="<?php if(is_login()) echo "../user/show.php?id=".current_user()->user_id; else echo '../user/index.php'?>"><?php if(is_login()) echo "个人中心";else echo '登录'?></a></li>
         </ul>
     </div>
 
@@ -49,7 +54,7 @@
     <div class="message">
         <--头-->
         <div class="head-in-message">
-            <img src="../assets/image/my.jpg" class="img-in-headmsg">
+            <img src="../assets/upload/head/<?php echo $user->head_img ?>" class="img-in-headmsg">
             <span class="name-in-message"><?php echo $user->nickname?></span><br>
             <span class="sth-to-say"><?php echo $user->saying?></span>
         </div>
@@ -98,16 +103,16 @@
     <--侧边栏-->
     <div class="message-in-aside">
         <div class="msg-card">
-            <img src="../assets/image/my.jpg">
+            <img src="../assets/upload/head/<?php echo $user->head_img ?>">
             <span class="place">常居：<?php echo $user->address ?></span>
             <span class="time-to-join"><?php echo $user->registered_time ?>&nbsp;加入</span>
             <span class="star">星光：<?php if(get_star_light($user->user_id)) echo $user->star_light ?>&nbsp;光年</span>
             <div class="line"></div>
-            <div class="word"><?php echo $user->Self_introduction?></div>
+            <div class="word"><?php echo $user->Self_introduction?><a style="<?php if(!is_user_right($user->user_id)) echo 'display: none' ?>" id="change" href="../assets/index.php?id=<?php print $user->user_id ?>">（修改）</a></div>
         </div>
 
         <div class="books-in-read">
-            <div class="title-in-aside">ManyMeanings正在读的书&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../index.php">(全部)</a></div>
+            <div class="title-in-aside"><?php echo $user->nickname?>正在读的书&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="../index.php">(全部)</a></div>
             <img src="../assets/image/book.jpg">
             <img src="../assets/image/book.jpg">
         </div>

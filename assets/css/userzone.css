@@ -32,6 +32,12 @@ p {
     margin-bottom: 30px;
 }
 
+.msg-card:hover #change{
+    display: inline;
+
+
+}
+
 .msg-card img {
     width: 150px;
     height: 150px;
@@ -278,4 +284,19 @@ p {
     width: 85px;
     margin-right: 40px;
 
+}
+
+#change {
+    color: #37a;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-decoration-line: none;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 21px;
+    display: none;
+}
+
+#change:hover {
+    color: #f2f2f2;
 }
