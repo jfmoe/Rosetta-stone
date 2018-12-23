@@ -1,7 +1,19 @@
-* {margin: 0;padding: 0}
-li {list-style: none;}
-form a {text-decoration: none;}
-html, body {font-size: 0}
+* {
+    margin: 0;
+    padding: 0
+}
+
+li {
+    list-style: none;
+}
+
+form a {
+    text-decoration: none;
+}
+
+html, body {
+    font-size: 0
+}
 
 /*黑色导航栏*/
 .global-nav ul {
@@ -13,22 +25,23 @@ html, body {font-size: 0}
 }
 
 .global-nav li {
-    float:left;
+    float: left;
 }
 
 .global-nav li a {
     font-size: 12px;
-    display:block;
+    display: block;
     color: snow;
-    padding:7px 13px;
-    text-decoration:  none;
+    padding: 7px 13px;
+    text-decoration: none;
 }
 
 .global-nav li a:hover {
     background-color: black;
 }
+
 /* 绿色导航栏*/
-.club-nav ul{
+.club-nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -44,35 +57,38 @@ html, body {font-size: 0}
 
 .search {
     width: 250px;
-    height:30px;
+    height: 30px;
     border: 1px solid #e7eee7;
     border-right: none;
     background-color: #ffffff;
     color: #8a8a8a;
-    outline:none;
+    outline: none;
     padding-left: 5px;
     float: left;
 }
+
 ::-webkit-input-placeholder { /* WebKit browsers */
     color: #999;
 }
+
 .button {
     height: 32px;
     width: 30px;
     border: 1px solid #e7eee7;
     border-left: none;
     background: url("../image/search.png") no-repeat center;
-    outline:none;
+    outline: none;
     background-color: #ffffff;
 }
+
 .button:hover {
     cursor: pointer;
 }
 
 .edit {
-    float:left;
-    margin-top:75px;
-    margin-left:310px;
+    float: left;
+    margin-top: 75px;
+    margin-left: 310px;
     border: 2px solid #e7eee7;
     background-color: #ffffff;
     padding: 0;
@@ -85,17 +101,20 @@ html, body {font-size: 0}
     float: left;
     width: 670px;
 }
+
 .articles img {
     float: left;
     width: 50px;
     height: 50px;
 }
+
 .article-block {
     margin-top: 20px;
     border-bottom: 1px solid #c9c9c9;
     height: 230px;
 
 }
+
 a:hover {
     background-color: steelblue;
     color: snow;
@@ -115,6 +134,7 @@ a:hover {
     text-decoration-line: none;
     padding: 0 0 0 0;
 }
+
 .article {
     margin-top: 32px;
     margin-left: 90px;
@@ -122,6 +142,7 @@ a:hover {
     height: 105px;
     background-color: #f9f9f9;
 }
+
 .titles {
     color: #37a;
     font-family: Helvetica, Arial, sans-serif;
@@ -131,6 +152,7 @@ a:hover {
     font-weight: normal;
     line-height: 24px;
 }
+
 .articles p {
     color: #555555;
     font-family: Helvetica, Arial, sans-serif;
@@ -138,6 +160,7 @@ a:hover {
     font-weight: normal;
     line-height: 21px;
 }
+
 .time {
     color: #aaaaaa;
     font-family: Helvetica, Arial, sans-serif;
@@ -146,6 +169,7 @@ a:hover {
     margin-left: 70px;
     margin-top: 35px;
 }
+
 /*页脚*/
 .footer {
     height: 30px;
@@ -158,15 +182,16 @@ a:hover {
     padding-top: 15px;
     width: 100%;
 }
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
+
 .content {
     flex: 1;
 }
-
 
 /*分页样式*/
 ul.pagination {
@@ -175,7 +200,9 @@ ul.pagination {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-ul.pagination li {display: inline;}
+ul.pagination li {
+    display: inline;
+}
 
 ul.pagination li a {
     margin-left: 3px;
@@ -194,13 +221,14 @@ ul.pagination li a {
 }
 
 ul.pagination li a.active {
-     background-color: #83bf73;
-     color: white;
- }
+    background-color: #83bf73;
+    color: white;
+}
 
 ul.pagination li a:hover:not(.active) {
     background-color: #ddd;
 }
+
 .fenye {
     margin-top: 50px;
     text-align: center;

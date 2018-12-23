@@ -2,8 +2,8 @@
     require_once '../inc/session.php';
     require_once '../inc/common.php';
 
-    if(login($_POST['username'] , $_POST['password'] ,$_POST['loginkeeping'])){
+    if (login($_POST['username'], $_POST['password'], $_POST['loginkeeping'])) {
         redirect_to('../');
-    }else{
+    } else {
         redirect_back();
     }

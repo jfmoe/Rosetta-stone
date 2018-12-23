@@ -21,8 +21,6 @@
 
 <body>
 <?php
-    require_once '../inc/db.php';
-    require_once '../inc/common.php';
     require_once '../inc/session.php';
 
     is_user_right(1) ?: redirect_to("../");
@@ -35,7 +33,7 @@
 
 ?>
 <table class="altrowstable" id="alternatecolor1">
-    <thead style="margin-left: 20px;">Users Table</thead>
+    <div class="table_title">Users Table</div>
     <tr>
         <th>
             User_id
@@ -101,7 +99,7 @@
 </table>
 
 <table class="altrowstable" id="alternatecolor2">
-    <thead style="margin-left: 20px;">Exist Articles Table</thead>
+    <div class="table_title">Exist Articles Table</div>
     <tr>
         <th>
             Title
@@ -155,7 +153,7 @@
 </table>
 
 <table class="altrowstable" id="alternatecolor3">
-    <thead style="margin-left: 20px;">Deleted Articles Table</thead>
+    <div class="table_title">Deleted Articles Table</div>
     <tr>
         <th>
             Title
@@ -208,7 +206,7 @@
         <?php } ?>
 </table>
 <table class="altrowstable" id="alternatecolor4">
-    <thead style="margin-left: 20px;">Exist Comments Table</thead>
+    <div class="table_title">Exist Comments Table</div>
     <tr>
         <th>
             Content
@@ -249,7 +247,7 @@
         <?php } ?>
 </table>
 <table class="altrowstable" id="alternatecolor5">
-    <thead style="margin-left: 20px;">Deleted Comments Table</thead>
+    <div class="table_title">Deleted Comments Table</div>
     <tr>
         <th>
             Content

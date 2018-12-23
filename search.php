@@ -20,13 +20,13 @@
     $key = trim($_POST['s']);
     $sql = "select * from articles where title like :key;";
     $query = $db->prepare($sql);
-    $key =  "%".$key."%";
+    $key = "%" . $key . "%";
     $query->bindParam(':key', $key, PDO::PARAM_STR);
 
     if (!$query->execute()) {
         print_r($query->errorInfo());
         redirect_back();
-    }else{
+    } else {
         $articles = $query->fetchAll();
     }
 ?>
@@ -87,7 +87,9 @@
                         <div><img src="assets/upload/head/<?php echo $user->head_img ?>"></div>
                         <div style="color:#9d9d9d ;
                     font-family: Helvetica, Arial, sans-serif ;
-                    font-size: 14px"><a class="name" href="user/show.php?id=<?php echo $user->user_id?>"><?php echo $user->nickname?></a> 的文章:
+                    font-size: 14px"><a class="name"
+                                        href="user/show.php?id=<?php echo $user->user_id ?>"><?php echo $user->nickname ?></a>
+                            的文章:
                         </div>
                         <div class="article">
                             <a class="titles"

@@ -1,7 +1,4 @@
 <?php
-
-    require_once '../inc/db.php';
-    require_once '../inc/common.php';
     require_once '../inc/session.php';
 
     if (authenticate_user_not_redirect()) {

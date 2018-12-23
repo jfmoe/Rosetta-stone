@@ -5,9 +5,7 @@ table.altrowstable {
     border-width: 1px;
     border-color: #a9c6c9;
     border-collapse: collapse;
-    margin-left: 10px;
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin: 0 auto;
 }
 
 table.altrowstable th {
@@ -29,7 +27,6 @@ table.altrowstable td a:hover {
     color: #FFFFFF;
 }
 
-
 table.altrowstable td {
     border-width: 1px;
     padding: 8px;
@@ -39,9 +36,18 @@ table.altrowstable td {
 }
 
 .oddrowcolor {
-    background-color: #d4e3e5;
+    background-color: #a9c6c98a;
 }
 
 .evenrowcolor {
-    background-color: #c3dde0;
+    background-color: #c2e0e38a;
+}
+
+.table_title {
+    font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }

@@ -35,8 +35,8 @@
                     set_notice('注册成功！');
                     redirect_to("./");
                 };
-                    }
-                }
+            }
+        }
     } else {
         set_notice('两次密码不一致');
         redirect_to('index.php#toregister');

@@ -15,23 +15,21 @@
 <body>
 <?php
     require_once 'inc/session.php';
-    require_once 'inc/db.php';
     require_once 'inc/fun_paging.php';
-    require_once 'inc/common.php';
 
     $sql = "select * from articles where article_is_delete=0";
-    $db1  = $db->query($sql)->fetchAll();
+    $db1 = $db->query($sql)->fetchAll();
     $total = count($db1);
     $num = 4;
-    $cpage = isset($_GET['page'])?intval($_GET['page']):1;
-    $pagenum = ceil($total/$num);
-    $offset = ($cpage-1)*$num;
+    $cpage = isset($_GET['page']) ? intval($_GET['page']) : 1;
+    $pagenum = ceil($total / $num);
+    $offset = ($cpage - 1) * $num;
     $sql = "select * from articles where article_is_delete=0 order by article_updated_time desc limit {$offset},{$num}";
-    $result  = $db->query($sql)->fetchAll();
-    $start = $offset+1;
-    $end=($cpage==$pagenum)?$total : ($cpage*$num);//结束记录页
-    $next=($cpage==$pagenum)? 0:($cpage+1);//下一页
-    $prev=($cpage==1)? 0:($cpage-1);//前一页
+    $result = $db->query($sql)->fetchAll();
+    $start = $offset + 1;
+    $end = ($cpage == $pagenum) ? $total : ($cpage * $num);//结束记录页
+    $next = ($cpage == $pagenum) ? 0 : ($cpage + 1);//下一页
+    $prev = ($cpage == 1) ? 0 : ($cpage - 1);//前一页
 
 ?>
 <div class="content">
@@ -43,11 +41,15 @@
             <li><a href="user/show.php">用户</a></li>
             <li><a href="about.html">关于</a></li>
             <li style="float:right; padding-right: 5px">
-                <a href="user/login_delete.php" style="<?php if(!is_login()) echo "display: none" ?>"><?php if(is_login()) echo "登出"?></a></li>
+                <a href="user/login_delete.php"
+                   style="<?php if (!is_login()) echo "display: none" ?>"><?php if (is_login()) echo "登出" ?></a></li>
             <li style="float:right;">
-                <a href="admin/" style="<?php if(!is_user_right(1)) echo "display: none" ?>"><?php if(is_login()) echo "后台"?></a></li>
+                <a href="admin/"
+                   style="<?php if (!is_user_right(1)) echo "display: none" ?>"><?php if (is_login()) echo "后台" ?></a>
+            </li>
             <li style="float:right;">
-                <a href="<?php if(is_login()) echo "user/show.php?id=".current_user()->user_id; else echo 'user/index.php'?>"><?php if(is_login()) echo "个人中心";else echo '登录'?></a></li>
+                <a href="<?php if (is_login()) echo "user/show.php?id=" . current_user()->user_id; else echo 'user/index.php' ?>"><?php if (is_login()) echo "个人中心"; else echo '登录' ?></a>
+            </li>
         </ul>
     </div>
 
@@ -80,12 +82,14 @@
 
             <?php
                 foreach ($result as $value):
-                    $user = get_user($value['author_id'])?>
+                    $user = get_user($value['author_id']) ?>
                     <div class="article-block">
                         <div><img src="assets/upload/head/<?php echo $user->head_img ?>"></div>
                         <div style="color:#9d9d9d ;
                     font-family: Helvetica, Arial, sans-serif ;
-                    font-size: 14px"><a class="name" href="user/show.php?id=<?php echo $user->user_id?>"><?php echo $user->nickname?></a> 的文章:
+                    font-size: 14px"><a class="name"
+                                        href="user/show.php?id=<?php echo $user->user_id ?>"><?php echo $user->nickname ?></a>
+                            的文章:
                         </div>
                         <div class="article">
                             <a class="titles"
@@ -96,29 +100,34 @@
                     </div>
                 <?php endforeach ?>
 
-                    <?php
-                        echo "<div class='fenye'>";
-                        paging($cpage, $pagenum);
-                        echo "</div>"
-                    ?>
+            <?php
+                echo "<div class='fenye'>";
+                paging($cpage, $pagenum);
+                echo "</div>"
+            ?>
         </div>
         <--侧边栏-->
         <div class="aside-in-articles">
             <div class="books-hot">
-                <div class="title-in-aside">最近热门的书&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="index.php">(全部)</a></div>
+                <div class="title-in-aside">最近热门的书&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="index.php">(全部)</a>
+                </div>
                 <img class="hot-books" src="assets/image/book.jpg">
                 <img class="hot-books" src="assets/image/book.jpg">
             </div>
 
             <div class="articles-in-aside">
-                <div class="title-in-aside">近期热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="index.php">(去主页)</a></div>
+                <div class="title-in-aside">近期热门文章&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;<a href="index.php">(去主页)</a>
+                </div>
                 <?php
                     $query = $db->prepare("select article_id, nickname, title, get_read, get_stars, get_read*0.25+get_stars*0.75 as rank from hot_articles order by rank desc limit 0,5;");
                     $query->execute();
                     $hot_articles = $query->fetchAll();
-                    foreach($hot_articles as $value):?>
-                      <div class="hot-articles"><a href="articles/show.php?id=<?= $value["article_id"] ?>"><?= $value["title"]?></a><p><?= $value["nickname"]?>&nbsp;<?= $value["get_read"]?>人浏览<p></div>
-                    <?php  endforeach;?>
+                    foreach ($hot_articles as $value):?>
+                        <div class="hot-articles"><a
+                                    href="articles/show.php?id=<?= $value["article_id"] ?>"><?= $value["title"] ?></a>
+                            <p><?= $value["nickname"] ?>&nbsp;<?= $value["get_read"] ?>人浏览
+                            <p></div>
+                    <?php endforeach; ?>
             </div>
         </div>
     </div>

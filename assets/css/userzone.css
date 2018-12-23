@@ -32,9 +32,8 @@ p {
     margin-bottom: 30px;
 }
 
-.msg-card:hover #change{
+.msg-card:hover #change {
     display: inline;
-
 
 }
 
