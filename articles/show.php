@@ -19,7 +19,7 @@
         <ul>
             <li><a href="../index.php">主页</a></li>
             <li><a href="../user/show.php">用户</a></li>
-            <li><a href="../about.html">关于</a></li>
+            <li><a href="https://github.com/ManyMeanings/Rosetta-stone">关于</a></li>
             <li style="float:right; padding-right: 5px">
                 <a href="../user/login_delete.php"
                    style="<?php if (!is_login()) echo "display: none" ?>"><?php if (is_login()) echo "登出" ?></a></li>
