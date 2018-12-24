@@ -4,8 +4,6 @@
     <list default="true" id="566d6c69-a1bd-47d3-be1a-0a7c49a08ad0" name="Default Changelist" comment="优化目录结构">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/init_db.sql" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +83,7 @@
     <session id="491429225">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="112" />
+          <entry key="project.closed" value="113" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="8" />
           <entry key="project.open.time.10" value="17" />
@@ -99,11 +97,11 @@
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.21" value="2" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.6" value="4" />
+          <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="18" />
           <entry key="project.open.time.8" value="25" />
           <entry key="project.open.time.9" value="14" />
-          <entry key="project.opened" value="115" />
+          <entry key="project.opened" value="116" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -126,7 +124,7 @@
           <entry key="ll" value="2" />
           <entry key="md" value="7" />
           <entry key="php" value="275" />
-          <entry key="png" value="12" />
+          <entry key="png" value="13" />
           <entry key="sql" value="4" />
           <entry key="svg" value="2" />
           <entry key="txt" value="4" />
@@ -138,7 +136,7 @@
           <entry key="CSS" value="55" />
           <entry key="Database Element" value="24" />
           <entry key="HTML" value="44" />
-          <entry key="Image" value="23" />
+          <entry key="Image" value="24" />
           <entry key="Ini" value="3" />
           <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="7" />
@@ -183,7 +181,13 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/image/user.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -285,9 +289,9 @@
       <path value="$PROJECT_DIR$/../../../php/php-7.2.1-nts" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="928" />
-    <option name="width" value="1001" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="926" />
+    <option name="width" value="1002" />
     <option name="height" value="1100" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -312,6 +316,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -324,11 +329,16 @@
               <item name="Rosetta-stone" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Rosetta-stone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rosetta-stone" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,19 +354,19 @@
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\assets\image" />
+      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone" />
+      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\inc" />
+      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\assets\css\login-css" />
+      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\assets\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\admin" />
       <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\inc" />
       <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\doc" />
       <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\articles" />
       <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\assets" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone" />
-      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\inc" />
-      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\assets\css\login-css" />
-      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\assets\js" />
-      <recent name="C:\server\phpStudy\PHPTutorial\WWW\phpp\Rosetta-stone\assets\image" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -506,11 +516,12 @@
       <workItem from="1545526998194" duration="4157000" />
       <workItem from="1545531396294" duration="131000" />
       <workItem from="1545573910947" duration="87000" />
+      <workItem from="1545638054254" duration="68000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342695000" />
+    <option name="totallyTimeSpent" value="342763000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,9 +533,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1691" height="958" extended-state="6" />
+    <frame x="809" y="0" width="874" height="960" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14898835" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3022113" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -606,7 +617,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/doc/pac.txt" />
     <entry file="file://$USER_HOME$/Desktop/Shadowsocks-4.1.3.1/pac.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -624,9 +634,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/login_delete.php" />
     <entry file="file://$PROJECT_DIR$/inc/admin-session.php" />
-    <entry file="file://$PROJECT_DIR$/about.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/about.html" />
     <entry file="file://$PROJECT_DIR$/stone.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -849,13 +857,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/init_db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/init_db.sql" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -905,6 +907,9 @@
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/image/user.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">

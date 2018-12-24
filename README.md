@@ -1,5 +1,5 @@
 # Rosetta-stone
-这是一个多用户博客网站，页面的样式和布局主要参考豆瓣的风格，项目运行环境环境为 __nginx-1.11.5 + PHP-7.2.10 + MySQL-5.5.53__ ，这是项目的演示地址：http://test.manymeanings.me
+这是一个多用户博客网站，页面的样式和布局主要参考豆瓣的风格，项目运行环境环境为 __Nginx-1.11.5 + PHP-7.2.10 + MySQL-5.5.53__ ，这是项目的演示地址：http://test.manymeanings.me
 ## 一、项目愿景
 Rosetta Stone，译为“罗塞塔石碑”，是一块制作于公元前196年的花岗闪长岩石碑，由于这块石碑同时刻有同一段内容的三种不同语言版本，使得近代考古学家得以解读出已经失传千余年的埃及象形文之意义与结构，而成为今日研究古埃及历史的重要里程碑。由于其知名度与重要性，罗塞塔石碑也被引申用来意指或暗喻一些其他的事物。至于为什么本项目取名 Rosetta-stone ，这就要从它的用途说起。
 
@@ -44,18 +44,16 @@ PHPStorm 是一款功能非常齐全的 IDE ，通过教育邮箱可以免费使
 
 ### 2.文件布局
 在 WEB 的世界里，采用的是面向资源的设计
->__什么是资源__？
 
->将内容、功能和页面看作一个整体，就是资源。
+__什么是资源__？
 
->每一个资源都有唯一url标识，
-
->资源代表着一类可被用户访问和存取的内容，故通常命名为名词形式
-
->用户可以通过一组标准的功能接口访问和存取资源，即CRUD
+- 将内容、功能和页面看作一个整体，就是资源。
+- 每一个资源都有唯一url标识，
+- 资源代表着一类可被用户访问和存取的内容，故通常命名为名词形式
+- 用户可以通过一组标准的功能接口访问和存取资源，即CRUD
 
 
-##### 以下为本项目主要的文件布局，每个根目录的文件夹均代表一种资源:
+__以下为本项目主要的文件布局，每个根目录的文件夹均代表一种资源:__
 
 * _admin_  
     + article_delete.php 
@@ -99,6 +97,106 @@ PHPStorm 是一款功能非常齐全的 IDE ，通过教育邮箱可以免费使
 * README.me
 * search.php
 * stone.sql
+
+### 3.数据库设计
+
+由于新手起步，为了查询方便，数据库设计得有些冗余，字段命名也不够规范（项目进行到一半再改字段名有些麻烦）。下面仅给出用户表和文章表以作示例：
+
+####（1）创建用户表
+
+用户表主键为 `user_id` ,其余字段为： __用户的基本信息，分别为昵称，邮箱，密码，注册日期，所有文章获得的浏览总数，所写文章数量，获得的星星，地址，真实姓名，自我介绍，签名，星光__
+
+    create table users
+    (
+    user_id           int auto_increment  primary key,
+    nickname          varchar(50)  default ''           not null,
+    e_mail            varchar(200) default ''           not null,
+    user_password     text                              not null,
+    registered_time   date         default '0000-00-00' not null,
+    get_read_number   int          default 0            not null,
+    write_number      int          default 0            not null,
+    had_geted_stars   int          default 0            not null,
+    address           varchar(100) default '浙江杭州'    not null,
+    real_name         varchar(15)                       not null,
+    Self_introduction text                              not null,
+    head_img          varchar(100)                      null,
+    saying            varchar(50)                       null,
+    star_light        float(11, 1)                      null
+    );
+
+####（2）创建文章表
+
+文章表主键为 `article_id` ,其余分别为： __作者id，标题，内容，创建日期，修改日期，是否被删除（默认为'0'，'1'表示被删除），浏览量，获得的星星数__
+
+    create table articles
+    (
+    article_id           int auto_increment  primary key,
+    author_id            int        default 0 not null,
+    title                varchar(50)          not null,
+    body                 text                 not null,
+    article_created_time datetime             not null,
+    article_updated_time datetime             not null,
+    article_is_delete    tinyint(1) default 0 not null,
+    get_read             int                  not null,
+    get_stars            int                  not null
+    );
+
+### 4.前后端技术
+
+本段主要介绍项目的界面组成及技术实现，前后端揉在一起。
+
+介绍主要界面之前，需要知道 `assets` 文件夹里存放 `css` 和 `js` 文件，通过标签引用。
+
+`inc` 文件夹里存放常用的 php 函数，通过 `require` 引用。简单介绍两个自定义函数：
+
+```
+//db.php
+
+<?php
+try {
+        $db = new PDO("mysql:host=127.0.0.1;dbname=stone;", "root", "root");
+        $db->query("SET NAMES 'utf8");
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+    } catch (PDOException $e) {
+        echo $e->getMessage() . '<br>';
+
+    }
+?>
+```
+
+该文件使用 `PDO` 链接 MySQL 数据库
+>PDO (PHP data Object) 是一个数据库连接抽象类库,自 5.1.0 版本起内置于 PHP
+
+`PDO` 具有以下特性
+
+- 兼容性：PDO 为各种主流数据库提供了统一的编程接口
+- 灵活性：PDO 在运行时才加载必须的数据库驱动程序，所以无需在每次使用不同数据库时重新配置和重新编译 PHP 
+- 面向对象特性：PDO 利用 PHP5 的面向对象特性，编程支持更强大
+- 内置对输入数据进行数据类型绑定、自动转义等功能, __有效防止 sql 注入__
+
+```
+//common.php
+
+<?php
+
+    function redirect_to($dest = '/')
+    {
+        header("HTTP/1.1 301 Moved Permanently");
+        header("Location: $dest");
+    }
+...
+```
+网页提交表单后需要重定向到另一个页面，自定义 `redirect_to()` 函数实现服务端重定向
+
+> HTTP重定向：服务器无法处理浏览器发送过来的请求（request），服务器告诉浏览器跳转到可以处理请求的url上。（浏览器会自动访问该URL地址，以至于用户无法分辨是否重定向了。） 
+
+下面开始介绍主要功能实现及相关界面设计：
+
+#### （1）注册 & 登录
+
+
+
+
 
 
 
