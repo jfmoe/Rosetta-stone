@@ -135,6 +135,7 @@
     float: right;
     cursor: pointer;
     margin-left: 5px;
+    text-decoration-line: none;
 }
 
 .comments img {
@@ -190,6 +191,9 @@
     display: block;
 }*/
 .comment-block:hover .comment-delete-button {
+    display: block;
+}
+.comment-block:hover .reply-button {
     display: block;
 }
 

@@ -102,4 +102,13 @@
         else return true;
     }
 
+    function get_comment($id){
+        global $db;
+        $query = $db->prepare("select * from comments where comment_id =:id");
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->execute();
+        $comment = $query->fetchObject();
+        return $comment;
+
+    }
 

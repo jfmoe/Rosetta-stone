@@ -145,6 +145,8 @@
                         <a class="author-in-comment"
                            href="../user/show.php?id=<?php echo $comment->commentator_id ?>"><?php echo $commentator->nickname ?></a>
                     </div>
+                    <?php if($comment->reply_id > 0) {$reply = get_comment($comment->reply_id ); $re_commentator = get_user($reply->commentator_id);echo "<p class=\"reply\">{$reply->comment_body}&nbsp;&nbsp;<a class=\"author-in-comment\"
+                           href=\"../user/show.php?id={$re_commentator->user_id}\">{$re_commentator->nickname}</a></p>";} ?>
                     <p><?php echo $comment->comment_body; ?></p>
                     <form action="../comments/destroy.php" method="post">
                         <input type="hidden" name="id" value="<?php echo $comment->comment_id; ?>"/>
@@ -152,13 +154,14 @@
                                 class="comment-delete-button" type="submit" value="删除"
                                 onclick="return confirm('是否确定删除这条评论？')">
                     </form>
-                    <div class="reply-button">回复</div>
+                    <a class="reply-button" href="show.php?id=<?php print $_GET['id']."&re_id=".$comment->comment_id."#comment"?>">回应</a>
                 </div>
             <?php } ?>
-        <form action="../comments/save.php" method="post">
+        <form id="comment" action="../comments/save.php" method="post">
             <input type="hidden" name='article_id_in_comment' value='<?php echo $_GET['id']; ?>'/>
+            <input type="hidden" name='re_id' value='<?php echo $_GET['re_id']; ?>'/>
             <div class="comment-edit">
-                <span class="comment-edit-title">你的回复&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;</span>
+                <span class="comment-edit-title">你<?php if(isset($_GET['re_id'])) echo"对该评论"?>的回复&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;</span>
                 <form>
                     <textarea name="comment_body" class="comment-edit-box" rows="4" cols="64" title=""></textarea>
                     <input type="submit" value="加上去" class="comment-edit-button" onclick="return confirm('是否确定回复？')">

@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="566d6c69-a1bd-47d3-be1a-0a7c49a08ad0" name="Default Changelist" comment="优化目录结构">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/articles/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/articles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/articles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments/save.php" beforeDir="false" afterPath="$PROJECT_DIR$/comments/save.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/common.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/common.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,10 +86,10 @@
     <session id="491429225">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="113" />
+          <entry key="project.closed" value="114" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="8" />
-          <entry key="project.open.time.10" value="17" />
+          <entry key="project.open.time.10" value="18" />
           <entry key="project.open.time.11" value="6" />
           <entry key="project.open.time.12" value="7" />
           <entry key="project.open.time.13" value="1" />
@@ -101,7 +104,7 @@
           <entry key="project.open.time.7" value="18" />
           <entry key="project.open.time.8" value="25" />
           <entry key="project.open.time.9" value="14" />
-          <entry key="project.opened" value="116" />
+          <entry key="project.opened" value="117" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -113,7 +116,7 @@
           <entry key="articles" value="7" />
           <entry key="book_like" value="1" />
           <entry key="comment_delete" value="1" />
-          <entry key="css" value="55" />
+          <entry key="css" value="56" />
           <entry key="hot_articles" value="1" />
           <entry key="html" value="44" />
           <entry key="ico" value="5" />
@@ -123,7 +126,7 @@
           <entry key="l" value="1" />
           <entry key="ll" value="2" />
           <entry key="md" value="7" />
-          <entry key="php" value="275" />
+          <entry key="php" value="281" />
           <entry key="png" value="13" />
           <entry key="sql" value="4" />
           <entry key="svg" value="2" />
@@ -133,14 +136,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="55" />
+          <entry key="CSS" value="56" />
           <entry key="Database Element" value="24" />
           <entry key="HTML" value="44" />
           <entry key="Image" value="24" />
           <entry key="Ini" value="3" />
           <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="7" />
-          <entry key="PHP" value="275" />
+          <entry key="PHP" value="281" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="SQL" value="3" />
           <entry key="SVG" value="2" />
@@ -149,26 +152,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="8332" />
+          <entry key="css" value="8340" />
           <entry key="dummy" value="4" />
           <entry key="html" value="7426" />
           <entry key="ini" value="1" />
           <entry key="js" value="46" />
           <entry key="ll" value="3" />
           <entry key="md" value="629" />
-          <entry key="php" value="11991" />
+          <entry key="php" value="12566" />
           <entry key="sql" value="1" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="8332" />
+          <entry key="CSS" value="8340" />
           <entry key="HTML" value="7426" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="46" />
           <entry key="Markdown" value="629" />
-          <entry key="PHP" value="11960" />
+          <entry key="PHP" value="12535" />
           <entry key="PLAIN_TEXT" value="18" />
           <entry key="SQL" value="32" />
         </counts>
@@ -181,10 +184,53 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/image/user.png">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/articles/show.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="148" column="76" selection-start-line="148" selection-start-column="76" selection-end-line="148" selection-end-column="76" />
+              <folding>
+                <element signature="e#5123#5129#0#HTML" expanded="true" />
+                <element signature="e#44#50#0" expanded="true" />
+                <element signature="e#50#56#0" expanded="true" />
+                <element signature="e#8886#8892#0#HTML" expanded="true" />
+                <element signature="e#8893#8899#0#HTML" expanded="true" />
+                <element signature="e#8900#8906#0#HTML" expanded="true" />
+                <element signature="e#8907#8913#0#HTML" expanded="true" />
+                <element signature="e#8914#8920#0#HTML" expanded="true" />
+                <element signature="e#8921#8927#0#HTML" expanded="true" />
+                <element signature="e#8928#8934#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comments/save.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="78" selection-start-line="6" selection-start-column="78" selection-end-line="6" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/common.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="583">
+              <caret line="107" column="54" lean-forward="true" selection-start-line="107" selection-start-column="54" selection-end-line="107" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/articles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-88">
+              <caret line="137" column="31" selection-start-line="137" selection-start-column="31" selection-end-line="137" selection-end-column="31" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -215,7 +261,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/inc/function.php" />
         <option value="$PROJECT_DIR$/inc/func_pdo.php" />
         <option value="$PROJECT_DIR$/fen.php" />
         <option value="$PROJECT_DIR$/../../../php/php-7.2.1-nts/php.ini" />
@@ -227,7 +272,6 @@
         <option value="$PROJECT_DIR$/articles/index.html" />
         <option value="$PROJECT_DIR$/articles/css/style.css" />
         <option value="$PROJECT_DIR$/assets/js/ajaxindex.js" />
-        <option value="$PROJECT_DIR$/assets/css/articles.css" />
         <option value="$USER_HOME$/Desktop/Shadowsocks-4.1.3.1/pac.txt" />
         <option value="$PROJECT_DIR$/doc/123.html" />
         <option value="$PROJECT_DIR$/inc/admin-session.php" />
@@ -242,7 +286,6 @@
         <option value="$PROJECT_DIR$/user/index.php" />
         <option value="$PROJECT_DIR$/user/login_save.php" />
         <option value="$PROJECT_DIR$/user/save.php" />
-        <option value="$PROJECT_DIR$/inc/common.php" />
         <option value="$PROJECT_DIR$/inc/db.php" />
         <option value="$PROJECT_DIR$/inc/fun_paging.php" />
         <option value="$PROJECT_DIR$/assets/destroy.php" />
@@ -254,7 +297,6 @@
         <option value="$PROJECT_DIR$/articles/getstar.php" />
         <option value="$PROJECT_DIR$/articles/new.php" />
         <option value="$PROJECT_DIR$/articles/save.php" />
-        <option value="$PROJECT_DIR$/articles/show.php" />
         <option value="$PROJECT_DIR$/articles/update.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/assets/css/mycss.css" />
@@ -264,8 +306,12 @@
         <option value="$PROJECT_DIR$/user/show.php" />
         <option value="$PROJECT_DIR$/user/detail.php" />
         <option value="$PROJECT_DIR$/comments/destroy.php" />
-        <option value="$PROJECT_DIR$/comments/save.php" />
         <option value="$PROJECT_DIR$/inc/session.php" />
+        <option value="$PROJECT_DIR$/inc/common.php" />
+        <option value="$PROJECT_DIR$/comments/save_reply.php" />
+        <option value="$PROJECT_DIR$/comments/save.php" />
+        <option value="$PROJECT_DIR$/assets/css/articles.css" />
+        <option value="$PROJECT_DIR$/articles/show.php" />
       </list>
     </option>
   </component>
@@ -289,9 +335,9 @@
       <path value="$PROJECT_DIR$/../../../php/php-7.2.1-nts" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="926" />
-    <option name="width" value="1002" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="925" />
+    <option name="width" value="1003" />
     <option name="height" value="1100" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -333,7 +379,17 @@
               <item name="Rosetta-stone" type="b2602c69:ProjectViewProjectNode" />
               <item name="Rosetta-stone" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rosetta-stone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rosetta-stone" type="462c0819:PsiDirectoryNode" />
+              <item name="comments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rosetta-stone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rosetta-stone" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -517,11 +573,12 @@
       <workItem from="1545531396294" duration="131000" />
       <workItem from="1545573910947" duration="87000" />
       <workItem from="1545638054254" duration="68000" />
+      <workItem from="1545726541761" duration="3876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342763000" />
+    <option name="totallyTimeSpent" value="346639000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -533,9 +590,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="809" y="0" width="874" height="960" extended-state="0" />
+    <frame x="-8" y="-8" width="1691" height="958" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3022113" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15450644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -617,13 +674,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/Shadowsocks-4.1.3.1/pac.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://f1a46357-331b-4290-b7b6-b4fe3ba459f9/schema/stone/table/article_read" />
     <entry file="file://$PROJECT_DIR$/doc/123.html" />
     <entry file="file://$PROJECT_DIR$/assets/css/login-css/images/bg.jpg">
@@ -672,13 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/articles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="311" column="1" selection-end-line="365" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -815,13 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/articles/show.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/articles/update.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -873,31 +909,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comments/save.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/fun_paging.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -910,6 +925,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/image/user.png">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/fun_paging.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="74" lean-forward="true" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comments/save_reply.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="107" column="54" lean-forward="true" selection-start-line="107" selection-start-column="54" selection-end-line="107" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/articles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="137" column="31" selection-start-line="137" selection-start-column="31" selection-end-line="137" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comments/save.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="78" selection-start-line="6" selection-start-column="78" selection-end-line="6" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles/show.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="148" column="76" selection-start-line="148" selection-start-column="76" selection-end-line="148" selection-end-column="76" />
+          <folding>
+            <element signature="e#5123#5129#0#HTML" expanded="true" />
+            <element signature="e#44#50#0" expanded="true" />
+            <element signature="e#50#56#0" expanded="true" />
+            <element signature="e#8886#8892#0#HTML" expanded="true" />
+            <element signature="e#8893#8899#0#HTML" expanded="true" />
+            <element signature="e#8900#8906#0#HTML" expanded="true" />
+            <element signature="e#8907#8913#0#HTML" expanded="true" />
+            <element signature="e#8914#8920#0#HTML" expanded="true" />
+            <element signature="e#8921#8927#0#HTML" expanded="true" />
+            <element signature="e#8928#8934#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
