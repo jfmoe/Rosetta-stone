@@ -97,8 +97,8 @@
             <span class="home">（<?php echo $user->address ?>）</span>
             <p><?php echo $user->Self_introduction ?></p>
             <div class="data-in-miniaside">
-                文章:<?php echo get_number("select * from articles where article_is_delete=0 and author_id=" . $user->user_id) ?>
-                篇 &nbsp;&nbsp;星辰:<?php echo get_star_light($user->user_id) ?>颗
+                文章：<?php echo get_number("select * from articles where article_is_delete=0 and author_id=" . $user->user_id) ?>
+                篇 &nbsp;&nbsp;星光：<?php if (get_star_light($user->user_id)) echo $user->star_light ?>&nbsp;光年
             </div>
         </div>
         <div class="articles-in-aside">
