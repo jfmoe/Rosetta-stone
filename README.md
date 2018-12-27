@@ -284,8 +284,6 @@ __系统怎么判断应该加载哪篇文章呢？__
 
 后台页面就是几个表格，使用 Bootstrap4 。管理员拥有至高的权限，可以删除或恢复本站所有文章和评论。
 
-![article_img](https://raw.githubusercontent.com/ManyMeanings/Rosetta-stone/master/assets/image/admin.png)
-
 注册和登录页面由于前端部分是直接从网上找的，所以我就简单讲讲后端的实现。
 
 __什么是会话（session）？__
